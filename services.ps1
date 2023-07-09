@@ -1,6 +1,6 @@
 # Created By: JohnDavid Abe
-# Created On: 6/15/23
-# Last Modified: 6/15/23
+# Created On: 7/9/23
+# Last Modified: 7/9/23
 # Title: services.ps1
 # Description: Used to detect new/deleted services, as well as enable critical/disable malicious services on cyberpatriot competition images
 # Version: 1.0
