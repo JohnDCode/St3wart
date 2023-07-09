@@ -30,10 +30,10 @@ $osInput = Read-Host -Prompt "[1] Windows 10  [2] Windows 11  [3] Server 19  [4]
 
 # Import csv baselines based on the input
 switch ($osInput) {
-    "1" { $serviceCSV = Import-Csv -Path .\ServiceBaselines\win10.csv }
-    "2" { $serviceCSV = Import-Csv -Path .\ServiceBaselines\win11.csv }
-    "3" { $serviceCSV = Import-Csv -Path .\ServiceBaselines\server19.csv }
-    "4" { $serviceCSV = Import-Csv -Path .\ServiceBaselines\server22.csv }
+    "1" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\win10.csv }
+    "2" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\win11.csv }
+    "3" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\server19.csv }
+    "4" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\server22.csv }
 }
 
 
