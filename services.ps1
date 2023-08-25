@@ -337,6 +337,7 @@ foreach($service in $disableServices) {
             }
 
         }
+    }
 }
 
 
