@@ -281,43 +281,62 @@ foreach($service in $disableServices) {
 
         # If the service is not disabled, disable the service
         if($start -ne "Disabled") {
-            Set-Service -Name $service -StartupType Disabled
+            $confirm = Read-Host -Prompt "Would you like to disable $service (Y/N)"
 
-            # Ensure the action completed
-            $start = Get-Service $service | Select-Object -ExpandProperty StartType
-            if($start -ne "Disabled") {
-                Write-Host "Failed to set startup of $service to Disabled"
-                Add-Content .\log.txt "`nAction $actionNumber. Set startup of service $service to Disabled (Fail)"
-                $actionNumber += 1
+            # If desired, disable the sevice
+            if ($confirm -eq "Y") {
+                Set-Service -Name $service -StartupType Disabled
+                
+                # Ensure the action completed
+                $start = Get-Service $service | Select-Object -ExpandProperty StartType
+                if($start -ne "Disabled") {
+                    Write-Host "Failed to set startup of $service to Disabled"
+                    Add-Content .\log.txt "`nAction $actionNumber. Set startup of service $service to Disabled (Fail)"
+                    $actionNumber += 1
+                } else {
+                    Write-Host "Set startup type of $service to Disabled"
+                    Add-Content .\log.txt "`nAction $actionNumber. Set startup of service $service to Disabled (Success)"
+                    $actionNumber += 1
+                }
             } else {
-                Write-Host "Set startup type of $service to Disabled"
-                Add-Content .\log.txt "`nAction $actionNumber. Set startup of service $service to Disabled (Success)"
+                # Log ignorance of non-disabled service
+                Add-Content .\log.txt "`nAction $actionNumber. Declined to set $service to Disabled"
                 $actionNumber += 1
             }
-
             
         }
+
+        
 
         # If the service is running, stop the service
         if($status -ne "Stopped") {
-            Stop-Service $service -Force
+            $confirm = Read-Host -Prompt "Would you like to stop $service (Y/N)"
 
-            # Ensure the action completed
-            $status = Get-Service $service | Select-Object -ExpandProperty Status
-            if($status -ne "Stopped") {
-                Write-Host "Failed to stop $service"
-                Add-Content .\log.txt "`nAction $actionNumber. Stopped service $service (Fail)"
-                $actionNumber += 1
-            } else {
-                Write-Host "Stopped $service"
-                Add-Content .\log.txt "`nAction $actionNumber. Stopped service $service (Success)"
-                $actionNumber += 1
-            }
+            # If desired, disable the sevice
+            if ($confirm -eq "Y") {
+                Stop-Service $service -Force
+
+                # Ensure the action completed
+                $status = Get-Service $service | Select-Object -ExpandProperty Status
+                if($status -ne "Stopped") {
+                    Write-Host "Failed to stop $service"
+                    Add-Content .\log.txt "`nAction $actionNumber. Stopped service $service (Fail)"
+                    $actionNumber += 1
+                } else {
+                    Write-Host "Stopped $service"
+                    Add-Content .\log.txt "`nAction $actionNumber. Stopped service $service (Success)"
+                    $actionNumber += 1
+                }
 
             
-        }
+            } else {
+                # Log ignorance of non-stopped service
+                Add-Content .\log.txt "`nAction $actionNumber. Declined to stop $service"
+                $actionNumber += 1
+            
+            }
 
-    }
+        }
 }
 
 
