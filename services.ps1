@@ -25,15 +25,13 @@ $actionNumber = 0
 
 # Read which system policies to apply from input
 Write-Host "Which OS baseline would you like to import?"
-$osInput = Read-Host -Prompt "[1] Windows 10  [2] Windows 11  [3] Server 19  [4] Server 22"
+$osInput = Read-Host -Prompt "[1] Windows 10 [2] Server 22"
 
 
 # Import csv baselines based on the input
 switch ($osInput) {
     "1" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\win10.csv }
-    "2" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\win11.csv }
-    "3" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\server19.csv }
-    "4" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\server22.csv }
+    "2" { $serviceCSV = Import-Csv -Path .\Baselines\ServiceBaselines\server22.csv }
 }
 
 
