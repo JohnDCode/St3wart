@@ -1,5 +1,23 @@
-# Define the baseline CSV file path (created by the previous script)
-$baselineFilePath = "C:\Path\To\Baseline\File.csv"
+# Created By: JohnDavid Abe
+# Created On: 9/14/23
+# Last Modified: 9/15/23
+# Title: services.ps1
+# Description: Used to compare a baseline csv of a file directory to a similar directory using file hashe
+# Version: 1.0
+
+
+
+
+# Log the script running
+$date = Get-Date
+Add-Content .\log.txt "Script Ran: scan.ps1"
+Add-Content .\log.txt "Date: $date"
+Add-Content .\log.txt ""
+
+# Save the number of actions taken
+$actionNumber = 0
+
+
 
 # Read which system policies to apply from input
 Write-Host "Which OS baseline would you like to import?"
@@ -8,52 +26,49 @@ $osInput = Read-Host -Prompt "[1] Windows 10  [2] Windows 11  [3] Server 19  [4]
 
 # Import csv baselines based on the input
 switch ($osInput) {
-    "1" { $baselineFilePath = ".\win10.csv" }
-    "2" { $baselineFilePath = ".\win11.csv" }
-    "3" { $baselineFilePath = ".\win19.csv" }
-    "4" { $baselineFilePath = ".\win22.csv" }
+    "1" { $baselineFile = Import-Csv -Path .\win10.csv }
+    "2" { $baselineFile = Import-Csv -Path .\win11.csv }
+    "3" { $baselineFile = Import-Csv -Path .\win19.csv }
+    "4" { $baselineFile = Import-Csv -Path .\win22.csv }
 }
 
 
-# Define the directory path on the different system
-$remoteDirectoryPath = "\\RemoteSystem\SharedFolder\Path"
+# Define the directory to compare to
+$scanPath = "C:/Windows/system32"
 
 # Define the output log file paths
-$dllLogFilePath = "C:\Path\To\Output\DllLog.txt"
-$exeLogFilePath = "C:\Path\To\Output\ExeLog.txt"
-
-# Load the baseline file information from the CSV
-$baselineFileInfo = Import-Csv -Path $baselineFilePath
+$dllLog = ".\dllScanLog.txt"
+$mainLog = ".\scanLog.txt"
 
 # Initialize arrays to store log entries for new, changed, and deleted files
 $newModifiedFiles = @()
 $deletedFiles = @()
 
 # Get all files in the remote directory
-$remoteFiles = Get-ChildItem -Path $remoteDirectoryPath -File -Recurse
+$sysFiles = Get-ChildItem -Path $scanPath -File -Recurse
 
 # Loop through each remote file
-foreach ($remoteFile in $remoteFiles) {
-    $remoteFilePath = $remoteFile.FullName
-    $remoteHash = Get-FileHash -Path $remoteFilePath -Algorithm SHA256
+foreach ($sysFile in $sysFiles) {
+    $path = $sysFile.FullName
+    $hash = Get-FileHash $path
 
     # Find the matching baseline file entry by name
-    $baselineEntry = $baselineFileInfo | Where-Object { $_.FileName -eq $remoteFile.Name }
+    $baselineEntry = $baselineFile | Where-Object { $_.FileName -eq $sysFile.Name }
 
     if ($baselineEntry) {
         # File exists in baseline, compare hashes
-        if ($baselineEntry.Hash -ne $remoteHash.Hash) {
+        if ($baselineEntry.Hash -ne $hash) {
             # File has changed
-            $newModifiedFiles += "File changed: $($remoteFile.Name)"
+            $newModifiedFiles += "File changed: $($sysFile.Name)"
         }
     } else {
         # File doesn't exist in baseline (new file)
-        $newModifiedFiles += "New file: $($remoteFile.Name)"
+        $newModifiedFiles += "New file: $($sysFile.Name)"
     }
 }
 
 # Check for missing files
-foreach ($baselineEntry in $baselineFileInfo) {
+foreach ($baselineEntry in $baselineFile) {
     $baselineFilePath = $baselineEntry.FilePath
     if (-not (Test-Path -Path $baselineFilePath)) {
         $deletedFiles += "Missing file: $($baselineEntry.FileName)"
