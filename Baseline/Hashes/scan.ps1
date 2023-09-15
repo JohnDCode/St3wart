@@ -1,22 +1,22 @@
 # Define the baseline CSV file path (created by the previous script)
-$baselineFilePath = ".\output.csv"
+$baselineFilePath = "C:\Path\To\Baseline\File.csv"
 
 # Define the directory path on the different system
-$remoteDirectoryPath = "C:/Windows/system32/"
+$remoteDirectoryPath = "\\RemoteSystem\SharedFolder\Path"
 
-# Define the output log file path
-$outputLogFilePath = ".\log.txt"
+# Define the output log file paths
+$dllLogFilePath = "C:\Path\To\Output\DllLog.txt"
+$exeLogFilePath = "C:\Path\To\Output\ExeLog.txt"
 
 # Load the baseline file information from the CSV
 $baselineFileInfo = Import-Csv -Path $baselineFilePath
 
-# Initialize an empty array to store log entries
-$logEntries = @()
+# Initialize arrays to store log entries for new, changed, and deleted files
+$newModifiedFiles = @()
+$deletedFiles = @()
 
 # Get all files in the remote directory
-$remoteFiles = Get-ChildItem -Path $remoteDirectoryPath -File
-
-Write-Host "Gotten files"
+$remoteFiles = Get-ChildItem -Path $remoteDirectoryPath -File -Recurse
 
 # Loop through each remote file
 foreach ($remoteFile in $remoteFiles) {
@@ -30,11 +30,11 @@ foreach ($remoteFile in $remoteFiles) {
         # File exists in baseline, compare hashes
         if ($baselineEntry.Hash -ne $remoteHash.Hash) {
             # File has changed
-            $logEntries += "File changed: $($remoteFile.Name)"
+            $newModifiedFiles += "File changed: $($remoteFile.Name)"
         }
     } else {
         # File doesn't exist in baseline (new file)
-        $logEntries += "New file: $($remoteFile.Name)"
+        $newModifiedFiles += "New file: $($remoteFile.Name)"
     }
 }
 
@@ -42,11 +42,27 @@ foreach ($remoteFile in $remoteFiles) {
 foreach ($baselineEntry in $baselineFileInfo) {
     $baselineFilePath = $baselineEntry.FilePath
     if (-not (Test-Path -Path $baselineFilePath)) {
-        $logEntries += "Missing file: $($baselineEntry.FileName)"
+        $deletedFiles += "Missing file: $($baselineEntry.FileName)"
     }
 }
 
-# Write log entries to the output log file
-$logEntries | Out-File -FilePath $outputLogFilePath -Append
+# Filter log entries for .dll and .exe files
+$dllEntries = $newModifiedFiles | Where-Object { $_ -match "\.dll$" }
+$exeEntries = $newModifiedFiles | Where-Object { $_ -match "\.exe$" }
 
-Write-Host "Comparison and logging complete. Check $outputLogFilePath for results."
+# Write log entries to the respective log files
+if ($dllEntries.Count -gt 0) {
+    $dllEntries | Out-File -FilePath $dllLogFilePath
+}
+
+if ($exeEntries.Count -gt 0) {
+    $exeEntries | Out-File -FilePath $exeLogFilePath
+}
+
+# Append deleted files to both log files if they match the criteria
+if ($deletedFiles.Count -gt 0) {
+    $deletedFiles | Out-File -FilePath $dllLogFilePath -Append
+    $deletedFiles | Out-File -FilePath $exeLogFilePath -Append
+}
+
+Write-Host "Comparison and logging complete."
