@@ -77,21 +77,21 @@ foreach ($baselineEntry in $baselineFile) {
 
 # Filter log entries for .dll and .exe files
 $dllEntries = $newModifiedFiles | Where-Object { $_ -match "\.dll$" }
-$exeEntries = $newModifiedFiles | Where-Object { $_ -match "\.exe$" }
+$mainEntries = $newModifiedFiles | Where-Object { $_ -notmatch "\.dll$" }
 
 # Write log entries to the respective log files
 if ($dllEntries.Count -gt 0) {
-    $dllEntries | Out-File -FilePath $dllLogFilePath
+    $dllEntries | Out-File -FilePath $dllLog
 }
 
 if ($exeEntries.Count -gt 0) {
-    $exeEntries | Out-File -FilePath $exeLogFilePath
+    $exeEntries | Out-File -FilePath $mainLog
 }
 
 # Append deleted files to both log files if they match the criteria
 if ($deletedFiles.Count -gt 0) {
-    $deletedFiles | Out-File -FilePath $dllLogFilePath -Append
-    $deletedFiles | Out-File -FilePath $exeLogFilePath -Append
+    $deletedFiles | Out-File -FilePath $dllLog -Append
+    $deletedFiles | Out-File -FilePath $mainLog -Append
 }
 
 Write-Host "Comparison and logging complete."
