@@ -1,6 +1,20 @@
 # Define the baseline CSV file path (created by the previous script)
 $baselineFilePath = "C:\Path\To\Baseline\File.csv"
 
+# Read which system policies to apply from input
+Write-Host "Which OS baseline would you like to import?"
+$osInput = Read-Host -Prompt "[1] Windows 10  [2] Windows 11  [3] Server 19  [4] Server 22"
+
+
+# Import csv baselines based on the input
+switch ($osInput) {
+    "1" { $baselineFilePath = ".\win10.csv" }
+    "2" { $baselineFilePath = ".\win11.csv" }
+    "3" { $baselineFilePath = ".\win19.csv" }
+    "4" { $baselineFilePath = ".\win22.csv" }
+}
+
+
 # Define the directory path on the different system
 $remoteDirectoryPath = "\\RemoteSystem\SharedFolder\Path"
 
