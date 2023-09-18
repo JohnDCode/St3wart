@@ -26,10 +26,6 @@ $readMe = Get-Content .\readMe.txt
 $mainAdmin = (whoami).Split('\')[-1]
 
 
-# List of the builtin accounts
-$defaultUsers = @('Guest', 'Administrator', 'DefaultAccount', 'WDAGUtilityAccount')
-
-
 # Retrieve all users on the system
 $sysUsers = Get-LocalUser | Select-Object -ExpandProperty Name
 
@@ -40,24 +36,20 @@ Get-LocalGroupMember Administrators | Select-Object -ExpandProperty Name | ForEa
 
 
 
+# Read which system policies to apply from input
+Write-Host "Which OS baseline would you like to import?"
+$osInput = Read-Host -Prompt "[1] Windows 10 [2] Server 22"
 
 
+# Import csv baselines based on the input
+switch ($osInput) {
+    "1" { 
+	// Get built-in groups/accounts
+ 	}
 
-
-
-
-# Load the authorized administrators and users into lists (directly from the readMe)
-
-# Find (the line number) where the list of authorized users and admins begins in the readMe
-$lineCount = 0
-# Loop through each line in the readMe.txt file
-foreach ($line in $readMe) {
-	# When the beginning of the authorized admins and users section is found, save the line where it is found
-	if ($line -like "*Authorized Administrators and Users*") {
-		$lineCount += 5
-		break
+    "2" {
+    // Get built-in groups/accounts
 	}
-	$lineCount += 1
 }
 
 
@@ -67,62 +59,23 @@ foreach ($line in $readMe) {
 
 
 
-# Select all text from the beginning of the authorized admins and users section, to the end of the readMe
-$readMe = Get-Item -Path .\readMe.txt | Get-Content -Tail (($readMe.Length) - $lineCount)
+Write-Host "Place the names of authorized users and admins into the respective text files. Confirm: "
+$proceedConfirm = Read-Host -Prompt "Y/N"
 
-# Holds all authorized administrators / the corresponding passwords
+
+# Import csv baselines based on the input
+switch ($proceedConfirm) {
+    "N" { 
+		exit
+ 	}
+}
+
+# Holds all authorized users & admins
 $authAdmins = @()
-$authPswds = @()
-
-
-
-
-
-
-
-
-# Read all administrators usernames and passwords from the readMe
-
-$index = 0
-while (1) {
-	# Save the admins name
-	$authAdmins += $readMe[$index]
-	# And their password found on the following line
-	$authPswds += ($readMe[$index+1]).Split(': ')[-1]
-
-	# If the list of admins has ended, break out of the loop
-	if ($readMe[$index + 2] -eq "") {
-		break
-	} else {
-		# Else continue to the next set of admins (and their password)
-		$index += 2
-	}
-}
-
-
-
-
-
-
-
-
-
-# Read all users usernames from the readMe
-
 $authUsers = @()
-$index += 5
 
-while (1) {
-	# Save the next user's name
-	$authUsers += $readMe[$index]
-	# If the list of users has ended, break out of the loop
-	if ($readMe[$index + 1] -eq "") {
-		break
-	} else {
-		# Else continue to the next set of users
-		$index += 1
-	}
-}
+$authAdmins = Get-Content .\admins.txt
+$authUsers = Get-Content .\users.txt
 
 
 
