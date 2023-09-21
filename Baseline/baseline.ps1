@@ -1,5 +1,5 @@
 # Define the directory path to baseline
-$directoryPath = "C:\Windows\system32\"
+$directoryPath = "C:/Windows/system32/"
 
 # Define the output CSV file path
 $outputFilePath = "./export.csv"

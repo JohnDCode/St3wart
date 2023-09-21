@@ -1,21 +1,7 @@
-- Scan.ps1
-- Get baselines of EVERYTHING in script (then use for LGPO)
 
 
-
-
-
-
-
-
-
-
-
-1. Test hashes
-2. Make services operate on reg?
-3. Do local/group pol
-4. Do dry run of entire St3wart zip
-5. Comments
+Dry run & comment
+C binarie for scan
 
 
 
@@ -23,7 +9,14 @@
 Research
 
 1. Uncat
+2. Security compliacne toolkit
+2. Rest of secpol / wtf????????
+2. Control Panel go what????????????????????
 2. Defensive Countermeasures
 3. Appsec
-
 4. Practice Images
+
+
+
+
+Maybe make services script operate using reg?
