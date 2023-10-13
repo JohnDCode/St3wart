@@ -1,11 +1,4 @@
 
-Baseline Script:
-Dry run & comment
-C binary for scan
-
-
-
-
 Research
 
 1. Uncat Operating Systems - What are we missing
