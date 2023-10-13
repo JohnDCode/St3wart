@@ -1,22 +1,18 @@
 
-
+Baseline Script:
 Dry run & comment
-C binarie for scan
+C binary for scan
 
 
 
 
 Research
 
-1. Uncat
-2. Security compliacne toolkit
-2. Rest of secpol / wtf????????
-2. Control Panel go what????????????????????
-2. Defensive Countermeasures
-3. Appsec
-4. Practice Images
-
-
-
-
-Maybe make services script operate using reg?
+1. Uncat Operating Systems - What are we missing
+2. Backend of secpol & secedit.exe - What is it?
+3. Control Panel - What am I missing
+4. Defensive Countermeasures - How can we go further than defender & firewall (vuln cat def refers to encryption?)
+5. Appsec - Continue making configs from CIS and StigViewer
+6. Practice Images
+7. Finish Baseline Script
+8. Alter services scan script to operate purely on registry & to automatically reapir critical system services
