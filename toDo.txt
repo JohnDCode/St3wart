@@ -1,10 +1,19 @@
 
-Research
+Scripts Before Round 2
 
 1. Finish Baseline Script
-2. Uncat Operating Systems - What are we missing
-3. Backend of secpol & secedit.exe - What is it?
-4. Defensive Countermeasures - How can we go further than defender & firewall (vuln cat def refers to encryption?)
-5. Appsec - Continue making configs from CIS and StigViewer
-6. Practice Images
-7. Alter services scan script to operate purely on registry & to automatically reapir critical system services
+2. Finish LGPO's
+3. Alter services scan script to operate purely on registry & to automatically reapir critical system services
+4. Criticical Services:
+- Firefox
+- Chrome
+- FTP
+- SMB
+- RDP
+
+
+Research Before Round 2
+
+1. Uncat Operating Systems - What are we missing
+2. Backend of secpol & secedit.exe - What is it?
+3. Defensive Countermeasures - How can we go further than defender & firewall (vuln cat def refers to encryption?)
