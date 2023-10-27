@@ -17,3 +17,4 @@ Research Before Round 2
 1. Uncat Operating Systems - What are we missing
 2. Backend of secpol & secedit.exe - What is it?
 3. Defensive Countermeasures - How can we go further than defender & firewall (vuln cat def refers to encryption?)
+4. Do Figure out how to make updates go br
