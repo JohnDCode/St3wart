@@ -1,20 +1,10 @@
 
 Scripts Before Round 2
 
-1. Finish Baseline Script
-2. Finish LGPO's
-3. Alter services scan script to operate purely on registry & to automatically reapir critical system services
-4. Criticical Services:
-- Firefox
-- Chrome
-- FTP
-- SMB
-- RDP
 
-
-Research Before Round 2
-
-1. Uncat Operating Systems - What are we missing
-2. Backend of secpol & secedit.exe - What is it?
-3. Defensive Countermeasures - How can we go further than defender & firewall (vuln cat def refers to encryption?)
-4. Do Figure out how to make updates go br
+1. Fix scripts
+2. Fix LGPO's
+3. Fully automate stig viewer
+4. Finish Baseline Script
+5. Crit Services
+6. Encryption for Deffensive Countermeausres & Final Perms? --> Yaeger
