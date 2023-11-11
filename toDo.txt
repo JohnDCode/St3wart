@@ -2,9 +2,10 @@
 To Do Before States
 
 
-1. Fix scripts
+1. Fix scripts & firewall script
 2. Fix LGPO's
 3. Fully automate stig viewer
 4. Finish Baseline Script
 5. Crit Services
 6. Encryption for Deffensive Countermeausres & Final Perms? --> Yaeger
+7. Secpol
