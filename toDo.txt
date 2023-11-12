@@ -2,8 +2,6 @@
 To Do Before States
 
 
-1. Fix scripts & firewall script --> DONE
-2. Fix LGPO's --> DONE
 3. Fully automate stig viewer
 4. Finish Baseline Script
 5. Crit Services
