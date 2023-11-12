@@ -1,6 +1,0 @@
-Incosisenties Between CIS Benchmark & Windows Server 22 VM:
-
-
-2.2.18
-2.2.32
-2.3.10.7
