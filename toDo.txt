@@ -2,9 +2,10 @@
 To Do Before States
 
 
-3. Fully automate stig viewer
-4. Finish Baseline Script
-5. Crit Services
-6. Encryption for Deffensive Countermeausres & Final Perms? --> Yaeger
-7. Secpol
-8. Investigate LGPOnotes.txt??
+1. Baseline script
+2. Fix and Update LGPO's
+3. Crit Services
+4. Perms script if time
+
+
+- Talk to Dembosky about Chrome
