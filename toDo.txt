@@ -6,6 +6,12 @@ To Do Before States
 2. Fix and Update LGPO's
 3. Crit Services
 4. Perms script if time
+5. Talk to Dembosky about Chrome
 
 
-- Talk to Dembosky about Chrome
+Possible Rabbit Holes:
+- MBSA
+- Download Windows updates beforehand
+
+
+
