@@ -2,7 +2,6 @@
 To Do Before States
 
 
-1. Baseline script
 2. Fix and Update LGPO's
 3. Crit Services
 4. Perms script if time
