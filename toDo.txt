@@ -11,6 +11,8 @@ To Do Before States
 Possible Rabbit Holes:
 - MBSA
 - Download Windows updates beforehand
+- Everything
+- Check history forgot notes lol
 
 
 
