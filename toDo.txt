@@ -2,10 +2,8 @@
 To Do Before States
 
 
-2. Fix and Update LGPO's
-3. Crit Services
-4. Perms script if time
-5. Talk to Dembosky about Chrome
+- Do things in checklist
+- Talk to Dembosky about Chrome and Checklist
 
 
 Possible Rabbit Holes:
