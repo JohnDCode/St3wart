@@ -2,8 +2,14 @@
 To Do:
 
 - Finish refined LGPO's
+- Make more points scrounging progress (look at past scoring reports, checklists, writeups, etc.)
+- Fix and examine baselining (specifically filter.ps1)
+- Mess around with voidtools everything
+- Finalize checklist (especially the setup)
+- Do dry run of scripts
+
 - More critical service configs
-- Make more points scrounging progress
+
 
 
 
