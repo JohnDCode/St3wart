@@ -1,6 +1,7 @@
 
 To Do:
 
+- Finish refined LGPO's
 - More critical service configs
 - Make more points scrounging progress
 
