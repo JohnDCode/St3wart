@@ -1,7 +1,6 @@
 
 To Do:
 - Finish refined LGPO's
-- Fix and examine baselining (specifically filter.ps1)
 
 
 Pre Comp:
