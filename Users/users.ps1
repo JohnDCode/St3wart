@@ -48,7 +48,7 @@ switch ($osInput) {
 
     "2" {
 	# Default groups for Server 22
-    	$defaultGroups = @("Access Control Assistance Operators", "Administrators", "Backup Operators", "Cryptographic Operators", "Device Owners", "Distributed COM Users", "Event Log Readers", "Guests", "Hyper-V Administrators", "IIS_IUSRS", "Network Configuration Operators", "Performance Log Users", "Performance Monitor Users", "Power Users", "Remote Desktop Users", "Remote Management Users", "Replicator", "System Managed Accounts Group", "Users")
+    	$defaultGroups = @("Access Control Assistance Operators", "Administrators", "Backup Operators", "Certificate Service DCOM Access", "Cryptographic Operators", "Device Owners", "Distributed COM Users", "Event Log Readers", "Guests", "Hyper-V Administrators", "IIS_IUSRS", "Network Configuration Operators", "Performance Log Users", "Performance Monitor Users", "Power Users", "Print Operators", "RDS Endpoint Servers", "RDS Management Servers", "RDS Remote Access Servers", "Remote Desktop Users", "Remote Management Users", "Replicator", "Storage Replica Administrators", "System Managed Accounts Group", "Users")
 	$defaultUsers = @("Administrator", "DefaultAccount", "Guest", "WDAGUtilityAccount")
 	}
 }
