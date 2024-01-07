@@ -12,80 +12,92 @@
 
 
 // Forward declare methods
-void exportFiles(const char *csvPath, const char *scanPath);
-void exportFilesRecursively(FILE *csvFile, const char *currentPath);
+void exportFiles(const char *exportPath, const char *scanPath);
+void exportFilesRecursively(FILE *exportFile, const char *currentPath);
 void calculateSHA256(const char *filePath, char *result);
 void removeNewline(char *str);
-int isLineContained(char *line, FILE *file);
-void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *outputFile);
+char *isLineContained(char *line, FILE *file);
+void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *addFile, FILE *modFile);
 
 
-// Get the files in a directory and their hashes, export them to a CSV
+
+// Get the files in the specified directory, and find files that have been added/modified wihtin such, based on the last baseline
 int main() {
 
     // Record the start time of the script to measure execution time
     clock_t start_time = clock();
 
-    // Paths to export and scanned directories
+    // Path to directory to scan
     const char *directoryPath = "C:/Windows"; 
-    const char *systemPath = "systemFiles.txt";
+
+    // Path to export all files on the system too
+    const char *systemPath = "system.txt";
+
+    // Last baseline csv to reference with files and hashes
     const char *baselinePath = "baseline.csv";
-    const char *outputPath = "output.txt";
+
+    // Path to export all added files between system and last baseline
+    const char *addPath = "added.txt";
+
+    // Path to export all modified files between system and last baseline (based on SHA-256 hashing)
+    const char *modPath = "modified.txt";
 
 
-    // Export all files in C:/Windows and their hashes to a temporary txt
+    // Export all files in C:/Windows to the system txt file
     exportFiles(systemPath, directoryPath);
 
 
-    // Open the files to compare and use to output
+
+    // Open the files used to scan
     
-    // Baseline
+    // Open Baseline CSV (to read)
     FILE *baselineFile = fopen(baselinePath, "r");
     if (baselineFile == NULL) {
         perror("Error opening baseline");
         exit(EXIT_FAILURE);
     }
 
-    
-    // System
+    // Open System TXT (to read)
     FILE *systemFile = fopen(systemPath, "r");
     if (systemFile == NULL) {
         perror("Error opening system file");
         exit(EXIT_FAILURE);
     }
 
-    // Output
-    FILE *outputFile = fopen(outputPath, "w");
-    if (outputFile == NULL) {
-        perror("Error opening output file");
+    // Open Output (added) Log (to write)
+    FILE *addFile = fopen(addPath, "w");
+    if (addFile == NULL) {
+        perror("Error opening added output file");
+        exit(EXIT_FAILURE);
+    }
+
+     // Open Output (mod) Log (to write)
+    FILE *modFile = fopen(modPath, "w");
+    if (modFile == NULL) {
+        perror("Error opening modified output file");
         exit(EXIT_FAILURE);
     }
     
 
-    // Test-->
-    //if(isLineContained("C:/Windows/addins/FXSEXT.ecf", baselineFile)) { printf("Found!"); }
+    // Compare the last baseline to the system files and export results
+    compareFiles(baselineFile, systemFile, addFile, modFile);
 
-    // Find what files are in the system files but not in the baseline
-    compareFiles(baselineFile, systemFile, outputFile);
 
+    // Close all of the files used
     fclose(baselineFile);
     fclose(systemFile);
-    fclose(outputFile);
+    fclose(addFile);
+    fclose(modFile);
     
-
-    
-    
-
-    
-
-
     // Record end time and use start time to get execution time
     clock_t end_time = clock();
     double elapsed_time = ((double) (end_time - start_time)) / CLOCKS_PER_SEC;
 
 
-    // Print execution time and output csv
-    printf("Scan results exported to %s\n", outputPath);
+
+    // Print execution time and output files
+    printf("Scan results exported to %s", addPath);
+    printf(" and %s\n", modPath);
     printf("Time taken: %.4f seconds\n", elapsed_time);
 
     return 0;
@@ -94,36 +106,36 @@ int main() {
 
 
 
-// Export all the files in a directory to a CSV
-void exportFiles(const char *csvPath, const char *scanPath) {
+// Export all files in a directory to a file
+void exportFiles(const char *exportPath, const char *scanPath) {
 
-    // Load baseline csv file into memory
-    FILE *csvFile = fopen(csvPath, "w");
+    // Load the exporting file into memory
+    FILE *exportFile = fopen(exportPath, "w");
 
-    // Ensure baseline csv opened
-    if (csvFile == NULL) {
-        perror("Error opening CSV file");
+    // Ensure exporting file opened
+    if (exportFile == NULL) {
+        perror("Error opening exportation file");
         return;
     }
 
     // Put header on the csv
-    fprintf(csvFile, "FilePath\n");
+    fprintf(exportFile, "FilePath\n");
 
 
     // Get files from the directory and add them to the csv
-    exportFilesRecursively(csvFile, scanPath);
+    exportFilesRecursively(exportFile, scanPath);
 
     // Close the csv file
-    fclose(csvFile);
+    fclose(exportFile);
 }
 
 
 
 
 // Get the files from a directory and export, call recursivley to get all the files from subdirectories as well
-void exportFilesRecursively(FILE *csvFile, const char *currentPath) {
+void exportFilesRecursively(FILE *exportFile, const char *currentPath) {
 
-    // Load the baseline directory into memory
+    // Load the directory to scan into memory
     DIR *directory = opendir(currentPath);
 
     // Ensure the directory was opened
@@ -134,6 +146,7 @@ void exportFilesRecursively(FILE *csvFile, const char *currentPath) {
 
     struct dirent *entry;
 
+    // Loop through entries within the directory
     while ((entry = readdir(directory)) != NULL) {
 
         // If the entry is a file
@@ -143,11 +156,11 @@ void exportFilesRecursively(FILE *csvFile, const char *currentPath) {
             char filePath[PATH_MAX];
             snprintf(filePath, sizeof(filePath), "%s/%s", currentPath, entry->d_name);
 
-            // Write the full path to the output file
+            // Ensure the file path is not from the excluded directories
             if ((strstr(filePath, "C:/Windows/servicing") == NULL) && (strstr(filePath, "C:/Windows/WinSxS") == NULL)) {
                 
-                // Write the file path and hash to the CSV (FilePath, Hash)
-                fprintf(csvFile, "%s\n", filePath);
+                // Write the file path to the exportation file
+                fprintf(exportFile, "%s\n", filePath);
                 
             }
 
@@ -163,7 +176,7 @@ void exportFilesRecursively(FILE *csvFile, const char *currentPath) {
             snprintf(nextPath, sizeof(nextPath), "%s/%s", currentPath, entry->d_name);
 
             // Get the files from that subdirectory as well
-            exportFilesRecursively(csvFile, nextPath);
+            exportFilesRecursively(exportFile, nextPath);
         }
     }
 
@@ -221,7 +234,7 @@ void calculateSHA256(const char *filePath, char *result) {
 
 
 
-
+// Remove any new line charcters from a string (used to format for comparison)
 void removeNewline(char *str) {
     char *pos;
     if ((pos = strchr(str, '\n')) != NULL) {
@@ -232,39 +245,82 @@ void removeNewline(char *str) {
 
 
 
-
 // Checks if a line is contained in a file
-int isLineContained(char *line, FILE *file) {
-    char buffer[1000];
-    fseek(file, 0, SEEK_SET);  // Reset file position to the beginning
+char *isLineContained(char *line, FILE *file) {
 
-    // Remove newline character from the given line
+    // Buffer size to hold lines in memory
+    char buffer[1000];
+
+    // Reset file position to the beginning
+    fseek(file, 0, SEEK_SET);
+
+    // Remove newline character from the given line to compare properly
     removeNewline(line);
 
     while (fgets(buffer, sizeof(buffer), file) != NULL) {
+
         // Remove newline character from the line in the file
         removeNewline(buffer);
 
+        // Check if line is contained in the file
         if (strstr(buffer, line) != NULL) {
-            // Line is contained in the second file
-            return 1;
+
+            // Return the line found with the stirng
+            char *result = (char *)malloc(strlen(buffer) + 1);
+            strcpy(result, buffer);
+            return result;
         }
     }
-    // Line is not contained in the second file
-    return 0;
+
+
+    // Line is not contained in the file so return NULL
+    return NULL;
 }
 
 
 
-// Function to compare files and write differing lines to the output file
-void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *outputFile) {
-    char line[1000];
 
-    // Read lines from the first file and check if each line is contained in the second file
+// Function to compare system export and baseline, then write differences to proper files for logging
+void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *addFile, FILE *modFile) {
+
+    // Write titles to added and modified exportation files
+    fprintf(addFile, "Added Files from Baseline: \n\n");
+    fprintf(modFile, "Modified Files from Baseline: \n\n");
+
+
+    // Used to hold each path to the system files and the corresponding lines in the baseline
+    char line[1000];
+    char *matchLine;
+    char *baselineHash;
+
+
+    // Read lines from the system files and check if each line is contained in the baseline
     while (fgets(line, sizeof(line), systemFile) != NULL) {
-        if (!(isLineContained(line, baselineFile))) {
-            // Line is not contained in the baseline, write to the output file
-            fprintf(outputFile, "%s", line);
+
+        // Search for a match in the baseline
+        matchLine = isLineContained(line, baselineFile);
+
+        // If no match is found
+        if (matchLine == NULL) {
+
+            // Line is not contained in the baseline, write to the added output file
+            fprintf(addFile, "%s\n", line);
+
+        // Match was found, check to see if modified (using SHA-256)
+        } else {
+
+            // Get the system file hash
+            char fileHash[65];
+            calculateSHA256(line, fileHash);
+	    baselineHash = strdup(strchr(matchLine, ',') + 1);
+
+            // Check to see if the system file hash is equivalent to the baseline file hash (by splitting the baseline entry into just the hash)
+            if(strcmp(fileHash, baselineHash) != 0) {
+
+                // File is modified, write to the modified output file
+                fprintf(modFile, "%s\n", line);
+            }
+
         }
     }
 }
