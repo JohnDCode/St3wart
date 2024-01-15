@@ -1,0 +1,40 @@
+Windows Server 22 LGPO Notes:
+
+
+
+Secpol Notes:
+- Minimum password length audit is set to same as minimum password length (not specified on CIS Benchmarks)
+- 2.2.18 cannot be configured with "NT Virtual Machines\Virtual Machines" unless the Hyper-V role is installed (not by default so not set in the GPO)
+
+
+
+Policies not found on the default admx templates (ID's refer to the CIS Benchmarks remediation checklist):
+- 18.3.1
+- 18.3.3
+- 18.4
+- 18.5
+- 18.6.4.2
+- 18.6.19.2.1
+- 18.7.3 through 18.7.7
+- 18.7.9
+- 18.9.25
+- 18.9.46.11.1
+- 18.10.12.1
+- 18.10.17
+- 18.10.57.3.3.1
+- 18.10.57.3.3.4
+- 18.10.59.4
+- 18.10.82.1
+- 19.7.7.5
+
+
+
+Additional Notes:
+- All policies GPO changed maximum password age from 365 to 60 and account lockout invalid attempts from 5 to 3 attempts (based on STIG recomendations), added LAPS policy remediations, and added STIG findings remediations
+- Increase scheduling priority in SecPol has conflicting entries in STIG and CIS
+- LAPS is configured by it is not by default in its own tab under Computer Configuration, instead it is under \System
+
+
+
+Domain Controller Notes:
+- 
