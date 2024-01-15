@@ -69,16 +69,46 @@ $rawBaseline = Get-Content $baselineCsv -Raw
 $systemLines = Get-Content $outputCsv
 $rawSystem = Get-Content $outputCsv -Raw
 
+# Save the flagged rules in lists for later to extract executables
+$allRules = @()
+
 
 # Find added rules by searching through each line in the list of system rules and checking to see if the line exists in the raw baseline string
-Write-Host "Added Rules: "
+"Added Rules: " | Out-File .\output.txt -Append
 foreach($rule in $systemLines) {
-    if(!($rawBaseline.Contains($rule))) { Write-Host $rule }
+    if(!($rawBaseline.Contains($rule))) {
+        $rule | Out-File .\output.txt -Append
+        $allRules += $rule
+
+    }
 }
+
+"" | Out-File .\output.txt -Append
+"" | Out-File .\output.txt -Append
 
 
 # Find deleted rules by searching through each line in the list of baseline rules and checking to see if the line exists in the raw system string
-Write-Host "Deleted Rules: "
+"Deleted Rules: " | Out-File .\output.txt -Append
 foreach($rule in $baselineLines) {
-	if(!($rawSystem.Contains($rule))) { Write-Host $rule }
+	if(!($rawSystem.Contains($rule))) {
+        $rule | Out-File .\output.txt -Append
+        $allRules += $rule
+    }
+}
+
+"" | Out-File .\output.txt -Append
+"" | Out-File .\output.txt -Append
+
+
+foreach($rule in $allRules) {
+
+    # Use regular expression to extract text between "|App=" and "|"
+    $match = [regex]::Match($rule, '\|App=(.*?)\|')
+
+    # Check if a match is found
+    if ($match.Success) {
+        # Extracted text is in the captured group at index 1
+        $match.Groups[1].Value | Out-File .\output.txt -Append
+    }
+
 }
