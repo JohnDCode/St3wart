@@ -1,0 +1,10 @@
+Account Pol - Set using LGPO alredy?
+Apsec / App Updates - Configs for literarly everything and labs
+Defensive Countermeasures - Do reg keys and make better script
+Local Pol - Adjust for STIG and other stuff but did 100% in semis
+OS Updates - Figure out how to go quicker
+Malware - Make checklist and list of tactics (defense in depth basically)
+Prohitibted files and software - Figure out how to baseline
+Service Auditing - This category sucks, make baseline reg key tool
+Uncat OS Settings - Idek, just do crazy research and then script as much as possible, reg keys prob to make go quicker (in semis its not just group pol stuffz)
+User Auditing - Switch user auditing script to use reg keys and ad ds user auditing script
