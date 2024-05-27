@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Account Pol - Set using LGPO alredy?
 Apsec / App Updates - Configs for literarly everything and labs
 Defensive Countermeasures - Do reg keys and make better script
@@ -8,3 +9,21 @@ Prohitibted files and software - Figure out how to baseline
 Service Auditing - This category sucks, make baseline reg key tool
 Uncat OS Settings - Idek, just do crazy research and then script as much as possible, reg keys - perms on files? prob to make go quicker (in semis its not just group pol stuffz)
 User Auditing - Switch user auditing script to use reg keys and ad ds user auditing script
+=======
+ToDo Before Summer Break:
+
+Account Pol - Cross reference with other standards and test viability of setting with LGPO
+Defensive Countermeasures - Switch script to importing reg keys instead of ps script, revamp existing tactics as well (less focus on this - only 0-1 vulns/box in semis the last 2 years)
+OS Updates - Figure out how to speed up by downloading beforehand
+Prohitibted Files/Software - Revamp baselines (again)
+Service Auditing (MOST WORK REQUIRED) - Figure out what the heck are we missing?
+Uncat OS Settings - Expand strategy past doing group pol (group pol covers the vulns from up to semis, but not in semis)
+User Auditing - Create modified version of script for domain controllers
+
+
+
+Summer Break and the Year:
+- Labs for critical services and more automated configurations for the main ones (IIS/DC/DNS/SMB)
+- More practice images
+- RvB practice
+>>>>>>> 9cc4704ce7e361bd46f6adbf792e0d7b5733fe52
