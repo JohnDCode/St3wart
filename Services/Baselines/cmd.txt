@@ -1,0 +1,3 @@
+Get-Service | Where-Object { $_.Name -match '_' } | Select-Object -ExpandProperty Name
+
+- Ensure to not include ID at the end of each

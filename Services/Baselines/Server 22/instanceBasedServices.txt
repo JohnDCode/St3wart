@@ -1,0 +1,14 @@
+CaptureService_
+cbdhsvc_
+CDPUserSvc_
+ConsentUxUserSvc_
+CredentialEnrollmentManagerUserSvc_
+DeviceAssociationBrokerSvc_
+DevicePickerUserSvc_
+DevicesFlowUserSvc_
+PimIndexMaintenanceSvc_
+PrintWorkflowUserSvc_
+UdkUserSvc_
+UnistoreSvc_
+UserDataSvc_
+WpnUserService_
