@@ -1,9 +1,9 @@
 # Created By: JohnDavid Abe
 # Created On: 5/28/24
-# Last Modified: 5/30/24
+# Last Modified: 6/5/24
 # Title: services.ps1
 # Description: Uses the registry to find vulnerabilities in Windows services
-# Version: 0.1
+# Version: 0.2
 
 
 
@@ -19,16 +19,19 @@ $actionNumber = 0
 
 
 # Function to extract registry service keys from a .reg file
+# Mainly used here to take a .reg backup and return a list of the services
 function ExtractKeys {
     param (
         [string]$filePath
     )
 
-	# Base File Path is all of the keys in \Services
+	# Base File Path for all service keys is all of the keys in HKLM...\Services
 	$tempbasePath = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services'
+
+    # Remove escape sequences from the string
 	$basePath = [regex]::Escape($tempbasePath)
 
-    # Read the file content
+    # Read the file content from the .reg file
     $fileContent = Get-Content -Path $filePath
 
     # Extract lines that start with "[" which denote registry keys within the specified base path
@@ -39,12 +42,14 @@ function ExtractKeys {
     $keys = $keys -replace "^\[$basePath\\", ""
     $keys = $keys -replace "\]$", ""
 
-    # Extract only the base keys (the part before the first backslash)
+    # Extract only the base keys (the part before the first backslash) which represents the base service key
     $baseKeys = $keys | ForEach-Object { ($_ -split '\\')[0] } | Sort-Object -Unique
     return $baseKeys
 }
 
 
+# Function to take hex from a registry value and convert it into a list of the strings it represents
+# Mainly used here to take the dependOnService reg value and return the dependency services
 function ConvertHexToServiceList {
     param (
         [string]$hexString
@@ -74,6 +79,9 @@ function ConvertHexToServiceList {
 }
 
 
+# Recursive function that looks for dependencies of a service using a .reg file of the main services key
+# Recursive as in finds dependencies of each dependency, recusively called until no further dependencies are found
+# Returns the dependent services as a list
 function FindDependenciesRecursive {
     param (
         [array]$services,
@@ -128,10 +136,13 @@ function FindDependenciesRecursive {
 	    }
     }
 
+    # If there are no more dependencies, just return the current list of dependencies
     if($dependencies.Length -eq 0) {
         return $dependencies
     } else {
-	$new = $dependencies + (FindDependenciesRecursive -services $dependencies -contentPath $contentPath)
+        
+        # If there are more dependencies, call func again to find dependencies of the new dependencies
+	    $new = $dependencies + (FindDependenciesRecursive -services $dependencies -contentPath $contentPath)
     	return $new
     }
     
@@ -139,6 +150,7 @@ function FindDependenciesRecursive {
 }
 
 
+# Function to set a value in the Windows registry in a specific key
 function SetRegValue {
     param (
         [string]$RegistryPath,
@@ -173,17 +185,17 @@ $osInput = Read-Host -Prompt "[1] Windows 11 [2] Server 22"
 # Import csv baselines based on the input
 switch ($osInput) {
     "1" {
-	    # Baseline of services for windows 11
+	    # Baseline of services for Windows 11
 		$baseKeys = ExtractKeys -filePath ".\Baselines\Windows 11\base.reg"
 		$instanceKeys = Get-Content ".\Baselines\Windows 11\instanceBasedServices.txt"
-        Add-Content .\log.txt "Selected Windows 11 baseline`n"
+        Add-Content .\log.txt "SCRIPT Selected Windows 11 baseline`n"
  	}
 
     "2" {
-		# Baseline of services for server 22
+		# Baseline of services for Server 22
     	$baseKeys = ExtractKeys -filePath ".\Baselines\Server 22\base.reg"
 		$instanceKeys = Get-Content ".\Baselines\Server 22\instanceBasedServices.txt"
-        Add-Content .\log.txt "Selected Server 22 baseline`n"
+        Add-Content .\log.txt "SCRIPT Selected Server 22 baseline`n"
 	}
 }
 
@@ -191,12 +203,13 @@ switch ($osInput) {
 Write-Host ""
 
 
-# Ensure the system reg keys is exported
+# Ensure the system reg keys is exported for use by script
 $proceedConfirm = Read-Host -Prompt "Export the HKLM\SYSTEM\CurrentControlSet\Services reg key as system.reg (Y/N)"
 
 
 # Confirm system reg keys are exported
 switch ($proceedConfirm) {
+    # Simply exit the script if not
     "N" { 
 	    exit
  	}
@@ -211,6 +224,8 @@ Write-Host ""
 $critServices = @()
 
 Write-Host "Enter critical services (service name not display name's):"
+
+# Keep asking for challenges until the user hits "exit" and add them to the list
 while ($true) {
     $tempCrit = Read-Host -Prompt "Enter 'exit' to continue"
 	if($tempCrit -eq "exit") {
@@ -239,9 +254,10 @@ if($critServices.Length -ne 0) {
 Write-Host ""
 Write-Host ""
 
+# Log the dependencies
 $dependLen = $dependencies.Length
 Write-Host "Found $dependLen critical service dependencies: "
-Add-Content .\log.txt "Found $dependLen critical service dependencies for critical services: $critServices`n"
+Add-Content .\log.txt "SCRIPT Found $dependLen critical service dependencies for critical services: $critServices`n"
 $dependencies
 
 
@@ -267,12 +283,13 @@ foreach($service in $systemKeys) {
 		}
 	}
 
+    # If instance based service (marked by the flag temp) then add to list
 	if($temp) {
 		$filteredKeys += $service
 	}
 }
 
-# Find the lengths of the cloud services found on system and the baseline
+# Log the lengths of both
 $cloudLen = $cloudServices.Length
 $baseCloudLen = $instanceKeys.Length
 
@@ -282,7 +299,7 @@ Write-Host ""
 
 # Display the cloud services found
 Write-Host "$cloudLen/$baseCloudLen cloud services found: "
-Add-Content .\log.txt  "$cloudLen/$baseCloudLen cloud services found`n"
+Add-Content .\log.txt  "SCRIPT $cloudLen/$baseCloudLen cloud services found`n"
 
 foreach($cloud in $cloudServices) { Write-Host $cloud }
 
@@ -295,8 +312,9 @@ Write-Host ""
 # Find keys (services) on the system that are not in the baseline
 $newKeys = Compare-Object -ReferenceObject $baseKeys -DifferenceObject $filteredKeys -PassThru | Where-Object { $_ -notin $baseKeys }
 $newKeysLen = $newKeys.Length
-Write-Host "Found $newKeysLen new services"
-Add-Content .\log.txt  "Found $newKeysLen new services`n"
+Write-Host "Found $newKeysLen new services:"
+Add-Content .\log.txt  "SCRIPT Found $newKeysLen new services: `n"
+foreach($newKey in $newKeys) { Add-Content .\log.txt  "$newKey`n" }
 $newKeys
 
 # Whitespace
@@ -316,10 +334,11 @@ $enableServices = $enableServices | Select-Object -Unique
 # Reverse the list of services to enable (want to enable dependencies first, than the critical services themselves)
 [array]::Reverse($enableServices)
 
-$disableServices = @("tapisrv", "PlugPlay", "NetTcpPortSharing", "BTAGService", "bthserv", "MapsBroker", "lfsvc", "IISADMIN", "irmon", "ICS", "SharedAccess", "lltdsvc", "LxssManager", "FTPSVC", "MSiSCSI", "sshd", "PNRPsvc", "p2psvc", "p2pimsvc", "PNRPAutoReg", "Spooler", "wercplsupport", "RasAuto", "SessionEnv", "TermService", "UmRdpService", "RPC", "RpcLocator", "RemoteRegistry", "RemoteAccess", "LanmanServer", "simptcp", "SNMP", "sacsvr", "SSDPSRV", "upnphost", "WMSvc", "WerSvc", "Wecsvc", "WMPNetworkSvc", "iccsvc", "WpnService", "PushToInstall", "WS-Management", "WinRM", "W3SVC", "XboxGipSvc", "XblAuthManager", "XblGameSave", "XboxNetApiSvc", "SNMPTRAP", "LanmanWorkstation")
+# Disable services that increase attack surface
+$disableServices = @("Bowser", "tapisrv", "PlugPlay", "NetTcpPortSharing", "BTAGService", "bthserv", "MapsBroker", "lfsvc", "IISADMIN", "irmon", "ICS", "SharedAccess", "lltdsvc", "LxssManager", "FTPSVC", "MSiSCSI", "sshd", "PNRPsvc", "p2psvc", "p2pimsvc", "PNRPAutoReg", "Spooler", "wercplsupport", "RasAuto", "SessionEnv", "TermService", "UmRdpService", "RPC", "RpcLocator", "RemoteRegistry", "RemoteAccess", "LanmanServer", "simptcp", "SNMP", "sacsvr", "SSDPSRV", "upnphost", "WMSvc", "WerSvc", "Wecsvc", "WMPNetworkSvc", "iccsvc", "WpnService", "PushToInstall", "WS-Management", "WinRM", "W3SVC", "XboxGipSvc", "XblAuthManager", "XblGameSave", "XboxNetApiSvc", "SNMPTRAP", "LanmanWorkstation")
 
 
-Write-Host "Starting and setting critical services, their dependencies, and other vital services to automatic"
+Write-Host "Starting and setting critical services, their dependencies, and other vital services to automatic:"
 
 
 
@@ -346,9 +365,9 @@ foreach($service in $enableServices) {
             $start = Get-Service $service | Select-Object -ExpandProperty StartType
             if($start -ne "Automatic") {
                 Write-Host "Failed to set startup of $service to Automatic"
-                Add-Content .\log.txt "Action $actionNumber. Failed to set startup of $service to Automatic`n"
+                Add-Content .\log.txt "FAILURE $actionNumber. Failed to set startup of $service to Automatic`n"
             } else {
-                Add-Content .\log.txt "Action $actionNumber. Set startup of $service to Automatic`n"
+                Add-Content .\log.txt "SUCCESS $actionNumber. Set startup of $service to Automatic`n"
                 
             }
 
@@ -358,15 +377,16 @@ foreach($service in $enableServices) {
 
         # If the service isn't running, start the service
         if($status -ne "Running") {
-            Start-Service $service
+            # Supress output (log will catch anything necessary)
+            $null = sc.exe start $service
 
             # Ensure the action completed
             $status = Get-Service $service | Select-Object -ExpandProperty Status
             if($status -ne "Running") {
                 Write-Host "Failed to start $service"
-                Add-Content .\log.txt "Action $actionNumber. Failed to start $service`n"
+                Add-Content .\log.txt "FALIURE $actionNumber. Failed to start $service`n"
             } else {
-                Add-Content .\log.txt "Action $actionNumber. Started $service`n"
+                Add-Content .\log.txt "SUCCESS $actionNumber. Started $service`n"
             }
 
             $actionNumber += 1
@@ -378,23 +398,35 @@ foreach($service in $enableServices) {
     }
 }
 
+# Whitespace
+Write-Host ""
+Write-Host ""
+
 
 
 # Set recovery actions (do after startup types/status set to see output of sc.exe clearly)
-Write-Host "Setting critical service recovery actions `n"
+Write-Host "Setting critical service recovery actions:"
 
 # Setting recovery actions for each important service
 foreach($service in $enableServices) {
 
-    # Try and set the recovery actions (suppress output, catch will log errors)
+    # Ensure $service is not a driver (types 1, 2 - Kernel, File System Drivers)
+    $query = sc.exe query $service | Select-String TYPE
+    if (   ($query -match ": 2  F") -or ($query -match ": 1  K")   ) {
+        Add-Content .\log.txt "SCRIPT $actionNumber. Can not set recovery actions for a driver $service`n"
+        $actionNumber += 1
+        continue
+    }
+
+    # Try and set the recovery actions (suppress output by setting to null, below will log errors)
     $null = sc.exe failure $service reset= 0 actions= restart/60000/restart/60000/restart/60000
 
     if($?) {
         # Log success
-        Add-Content .\log.txt "Action $actionNumber. Set recovery actions of $service`n"
+        Add-Content .\log.txt "SUCCESS $actionNumber. Set recovery actions of $service`n"
     } else {
         # Catch sc.exe errors and log properly
-        Add-Content .\log.txt "Action $actionNumber. Failed to set recovery actions of $service`n"
+        Add-Content .\log.txt "FAILURE $actionNumber. Failed to set recovery actions of $service`n"
         Write-Host "Couldn't set the recovery actions of $service to restart"
     }
 
@@ -410,7 +442,7 @@ Write-Host ""
 Add-Content .\log.txt "`n`n"
 
 
-Write-Host "Stopping and disabling other services to reduce attack surface"
+Write-Host "Stopping and disabling other services to reduce attack surface:"
 
 
 
@@ -438,9 +470,9 @@ foreach($service in $disableServices) {
                 $start = Get-Service $service | Select-Object -ExpandProperty StartType
                 if($start -ne "Disabled") {
                     Write-Host "Failed to set startup of $service to Disabled"
-                    Add-Content .\log.txt "Action $actionNumber. Failed to set startup of $service to Disabled`n"
+                    Add-Content .\log.txt "FAILURE $actionNumber. Failed to set startup of $service to Disabled`n"
                 } else {
-                    Add-Content .\log.txt "Action $actionNumber. Set startup of $service to Disabled`n"
+                    Add-Content .\log.txt "SUCCESS $actionNumber. Set startup of $service to Disabled`n"
                 }
 
                 $actionNumber += 1
@@ -459,15 +491,16 @@ foreach($service in $disableServices) {
 
             # Ensure the service is not critical or a dependency
             if (-not($enableServices.Contains($service))) {
-                Stop-Service $service -Force
+                # Supress output (log will catch anything necessary)
+                $null = sc.exe stop $service
 
                 # Ensure the action completed
                 $status = Get-Service $service | Select-Object -ExpandProperty Status
                 if($status -ne "Stopped") {
                     Write-Host "Failed to stop $service"
-                    Add-Content .\log.txt "Action $actionNumber. Failed to stop $service`n"
+                    Add-Content .\log.txt "FAILURE $actionNumber. Failed to stop $service`n"
                 } else {
-                    Add-Content .\log.txt "Action $actionNumber. Stopped $service`n"
+                    Add-Content .\log.txt "SUCCESS $actionNumber. Stopped $service`n"
                 }
 
                 $actionNumber += 1
@@ -494,6 +527,10 @@ Add-Content .\log.txt "`n`n"
 Add-Content .\log.txt "`n`n"
 
 
-# Notes:
-# Figure out a way to handle browser (features)
-# Review services to disable and enable
+<# Notes
+
+- Continuosly update services to disable and enable
+- Fix annoying/cluttered recovery actions logs (maybe check if already set properly before attempting to set like in other actions?)
+- Fix services not stopping/starting after reg startup changes
+
+#>
