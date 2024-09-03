@@ -35,7 +35,7 @@ Get-LocalGroupMember Administrators | Select-Object -ExpandProperty Name | ForEa
 
 # Read which system policies to apply from input
 Write-Host "Which OS baseline would you like to import?"
-$osInput = Read-Host -Prompt "[1] Windows 10 [2] Server 22"
+$osInput = Read-Host -Prompt "[1] Windows 10 [2] Windows 11 [3] Server 19 [4] Server 22"
 
 
 # Import csv baselines based on the input
@@ -47,8 +47,20 @@ switch ($osInput) {
  	}
 
     "2" {
+	# Default groups for Windows 11
+	$defaultGroups = @("Access Control Assistance Operators", "Administrators", "Backup Operators", "Cryptographic Operators", "Device Owners", "Distributed COM Users", "Event Log Readers", "Guests", "Hyper-V Administrators", "IIS_IUSRS", "Network Configuration Operators", "Performance Log Users", "Performance Monitor Users", "Power Users", "Remote Desktop Users", "Remote Management Users", "Replicator", "System Managed Accounts Group", "Users")
+	$defaultUsers = @("Administrator", "DefaultAccount", "Guest", "WDAGUtilityAccount")
+	}
+
+	"3" {
+	# Default groups for Server 19
+	$defaultGroups = @("Access Control Assistance Operators", "Administrators", "Backup Operators", "Certificate Service DCOM Access", "Cryptographic Operators", "Device Owners", "Distributed COM Users", "Event Log Readers", "Guests", "Hyper-V Administrators", "IIS_IUSRS", "Network Configuration Operators", "Performance Log Users", "Performance Monitor Users", "Power Users", "Print Operators", "RDS Endpoint Servers", "RDS Management Servers", "RDS Remote Access Servers", "Remote Desktop Users", "Remote Management Users", "Replicator", "Storage Replica Administrators", "System Managed Accounts Group", "Users")
+	$defaultUsers = @("Administrator", "DefaultAccount", "Guest", "WDAGUtilityAccount")
+	}
+
+	"4" {
 	# Default groups for Server 22
-    	$defaultGroups = @("Access Control Assistance Operators", "Administrators", "Backup Operators", "Certificate Service DCOM Access", "Cryptographic Operators", "Device Owners", "Distributed COM Users", "Event Log Readers", "Guests", "Hyper-V Administrators", "IIS_IUSRS", "Network Configuration Operators", "Performance Log Users", "Performance Monitor Users", "Power Users", "Print Operators", "RDS Endpoint Servers", "RDS Management Servers", "RDS Remote Access Servers", "Remote Desktop Users", "Remote Management Users", "Replicator", "Storage Replica Administrators", "System Managed Accounts Group", "Users")
+    $defaultGroups = @("Access Control Assistance Operators", "Administrators", "Backup Operators", "Certificate Service DCOM Access", "Cryptographic Operators", "Device Owners", "Distributed COM Users", "Event Log Readers", "Guests", "Hyper-V Administrators", "IIS_IUSRS", "Network Configuration Operators", "Performance Log Users", "Performance Monitor Users", "Power Users", "Print Operators", "RDS Endpoint Servers", "RDS Management Servers", "RDS Remote Access Servers", "Remote Desktop Users", "Remote Management Users", "Replicator", "Storage Replica Administrators", "System Managed Accounts Group", "Users")
 	$defaultUsers = @("Administrator", "DefaultAccount", "Guest", "WDAGUtilityAccount")
 	}
 }

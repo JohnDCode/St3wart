@@ -179,19 +179,26 @@ Write-Host ""
 
 # Read which baseline to load from input
 Write-Host "Which OS baseline would you like to import?"
-$osInput = Read-Host -Prompt "[1] Windows 11 [2] Server 22"
+$osInput = Read-Host -Prompt "[1] Windows 10 [2] Windows 11 [3] Server 22"
 
 
 # Import csv baselines based on the input
 switch ($osInput) {
     "1" {
-	    # Baseline of services for Windows 11
-		$baseKeys = ExtractKeys -filePath ".\Baselines\Windows 11\base.reg"
-		$instanceKeys = Get-Content ".\Baselines\Windows 11\instanceBasedServices.txt"
-        Add-Content .\log.txt "SCRIPT Selected Windows 11 baseline`n"
+	    # Baseline of services for Windows 10
+		$baseKeys = ExtractKeys -filePath ".\Baselines\Windows 10\base.reg"
+		$instanceKeys = Get-Content ".\Baselines\Windows 10\instanceBasedServices.txt"
+        Add-Content .\log.txt "SCRIPT Selected Windows 10 baseline`n"
  	}
 
     "2" {
+		# Baseline of services for Windows 11
+    	$baseKeys = ExtractKeys -filePath ".\Baselines\Windows 11\base.reg"
+		$instanceKeys = Get-Content ".\Baselines\Windows 11\instanceBasedServices.txt"
+        Add-Content .\log.txt "SCRIPT Selected Windows 11 baseline`n"
+	}
+
+    "3" {
 		# Baseline of services for Server 22
     	$baseKeys = ExtractKeys -filePath ".\Baselines\Server 22\base.reg"
 		$instanceKeys = Get-Content ".\Baselines\Server 22\instanceBasedServices.txt"
@@ -532,5 +539,6 @@ Add-Content .\log.txt "`n`n"
 - Continuosly update services to disable and enable
 - Fix annoying/cluttered recovery actions logs (maybe check if already set properly before attempting to set like in other actions?)
 - Fix services not stopping/starting after reg startup changes
+- Server 19 baseline?
 
 #>
