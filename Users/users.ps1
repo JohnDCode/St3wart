@@ -405,6 +405,37 @@ foreach($user in $auditedSysUsers) {
 
 
 
+# Only addition for CP 17
+# Managing user accounts password never expiring
+
+$allUsers = Get-LocalUser | Select-Object -ExpandProperty Name
+
+# Confirm that the main admin wants to set secure passwords for each account
+$confirm = Read-Host -Prompt "Would you like to ensure each user account's password expires (in accordance to local policies)? (Y/N)"
+
+
+# If the user does wish to change expiration policies, cycle through each user
+if ($confirm -eq "Y") {
+	foreach($user in $allUsers) {
+		# There will never be a situation where the password should expire on the WDAGUtility Account
+		if($user -eq "WDAGUtilityAccount") {
+			continue
+		}
+		
+		# Make the password expire
+		Set-LocalUser -Name $user -PasswordNeverExpires $false
+  		if ($?) {
+    		Add-Content .\log.txt "`nAction $actionNumber. $user password expires (Success)"
+	   		$actionNumber += 1
+		} else {
+			Add-Content .\log.txt "`nAction $actionNumber. $user password expires (Fail)"
+	   		$actionNumber += 1
+		}
+	}
+}
+
+
+
 
 
 # Remind user to perform readMe tasks (usually some user task can be found in the readMe)
