@@ -3,9 +3,9 @@ To do before labs:
 
 1. Do baseline users script (DONE)
 2. Check deffensive counteremasures script (DONE)
+3. Fix services script (DONE)
 
 
-3. Fix services script
 4. New LGPOS
 5. Fix file baselines scripts & tactics
 6. New uncat script for misc stuff

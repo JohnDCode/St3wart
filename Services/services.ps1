@@ -328,7 +328,16 @@ $newKeys = Compare-Object -ReferenceObject $baseKeys -DifferenceObject $filtered
 $newKeysLen = $newKeys.Length
 Write-Host "Found $newKeysLen new services:"
 Add-Content .\log.txt  "SCRIPT Found $newKeysLen new services: `n"
-foreach($newKey in $newKeys) { Add-Content .\log.txt  "$newKey`n" }
+foreach($newKey in $newKeys) { 
+    $display = Get-Service $newKey -ErrorAction SilentlyContinue | Select-Object -ExpandProperty DisplayName
+    if($?) {
+        Add-Content .\log.txt  "$display - $newKey`n"
+    } else {
+        Add-Content .\log.txt  "$newKey`n"
+    }
+    
+
+}
 $newKeys
 
 # Whitespace
