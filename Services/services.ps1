@@ -330,7 +330,7 @@ Write-Host ""
 Add-Content .\log.txt  "`n`n"
 
 # Enable services and also dependencies and critical services
-$enableServices = @("DHCP", "EventLog", "wuauserv", "mpssvc", "WinDefend", "WdNisSvc")
+$enableServices = @("DHCP", "EventLog", "wuauserv", "mpssvc", "WinDefend", "WdNisSvc", "Sense")
 $enableServices += FindDependenciesRecursive -services $enableServices -contentPath $rawSystemPath
 $enableServices += $critServices
 $enableServices += $dependencies
@@ -360,13 +360,14 @@ foreach($service in $enableServices) {
 
         # Retrieve the status and start types of the service
         $start = Get-Service $service | Select-Object -ExpandProperty StartType
-        $status = Get-Service $service | Select-Object -ExpandProperty Status
-
+       
         # If the service does not start automatically, set it to automatic
         if($start -ne "Automatic") {
             # Set-Service -Name $service -StartupType Automatic
-            # Set using the registry instead of sc
-            SetRegValue -RegistryPath ("HKLM:\SYSTEM\CurrentControlSet\Services\" + $service) -ValueName "Start" -ValueData "2"
+            # Set using sc instead of registry
+            # SetRegValue -RegistryPath ("HKLM:\SYSTEM\CurrentControlSet\Services\" + $service) -ValueName "Start" -ValueData "2"
+            # Supress output (log will catch anything necessary)
+            $null = sc.exe config $service start=auto
 
             # Ensure the action completed
             $start = Get-Service $service | Select-Object -ExpandProperty StartType
@@ -382,10 +383,14 @@ foreach($service in $enableServices) {
 
         }
 
+	$status = Get-Service $service | Select-Object -ExpandProperty Status
+
+
         # If the service isn't running, start the service
         if($status -ne "Running") {
             # Supress output (log will catch anything necessary)
             $null = sc.exe start $service
+            Start-Sleep -Seconds 5
 
             # Ensure the action completed
             $status = Get-Service $service | Select-Object -ExpandProperty Status
@@ -470,8 +475,10 @@ foreach($service in $disableServices) {
             # Ensure the service is not critical or a dependency
             if (-not($enableServices.Contains($service))) {
                 # Set-Service -Name $service -StartupType Disabled
-                # Set using the registry instead of sc
+                # Set using sc instead of registry
                 SetRegValue -RegistryPath ("HKLM:\SYSTEM\CurrentControlSet\Services\" + $service) -ValueName "Start" -ValueData "4"
+            	# Supress output (log will catch anything necessary)
+            	$null = sc.exe config $service start=disabled
                 
                 # Ensure the action completed
                 $start = Get-Service $service | Select-Object -ExpandProperty StartType
@@ -500,6 +507,7 @@ foreach($service in $disableServices) {
             if (-not($enableServices.Contains($service))) {
                 # Supress output (log will catch anything necessary)
                 $null = sc.exe stop $service
+		Start-Sleep -Seconds 5
 
                 # Ensure the action completed
                 $status = Get-Service $service | Select-Object -ExpandProperty Status
