@@ -179,7 +179,7 @@ Write-Host ""
 
 # Read which baseline to load from input
 Write-Host "Which OS baseline would you like to import?"
-$osInput = Read-Host -Prompt "[1] Windows 10 [2] Windows 11 [3] Server 22"
+$osInput = Read-Host -Prompt "[1] Windows 10 [2] Windows 11 [3] Server 19 [4] Server 22"
 
 
 # Import csv baselines based on the input
@@ -199,6 +199,13 @@ switch ($osInput) {
 	}
 
     "3" {
+		# Baseline of services for Server 19
+    	$baseKeys = ExtractKeys -filePath ".\Baselines\Server 19\base.reg"
+		$instanceKeys = Get-Content ".\Baselines\Server 19\instanceBasedServices.txt"
+        Add-Content .\log.txt "SCRIPT Selected Server 19 baseline`n"
+	}
+
+    "4" {
 		# Baseline of services for Server 22
     	$baseKeys = ExtractKeys -filePath ".\Baselines\Server 22\base.reg"
 		$instanceKeys = Get-Content ".\Baselines\Server 22\instanceBasedServices.txt"
