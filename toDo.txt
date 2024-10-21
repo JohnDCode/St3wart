@@ -1,12 +1,15 @@
 
-To do before labs:
-
-1. Do baseline users script (DONE)
-2. Check deffensive counteremasures script (DONE)
-3. Fix services script (DONE)
+To do before R1:
 
 
-4. New LGPOS
-5. Fix file baselines scripts & tactics
-6. New uncat script for misc stuff
-7. Permissions script
+1. Integrate Donkey's stuff
+2. New uncat script for misc stuff / checklist
+3. Fix file baselines scripts & tactics / checklist
+4. Permissions script
+
+5. Test everything
+
+
+Should do before R2:
+6. New LGPOS
+
