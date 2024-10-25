@@ -367,6 +367,10 @@ if ($confirm -eq "Y") {
 	REG ADD 'HKLM\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules' /v '92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b' /t 'REG_SZ' /d '1' /f
 	REG ADD 'HKLM\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\ASR\Rules' /v 'c1db55ab-c21a-4637-bb3f-a12568109d35' /t 'REG_SZ' /d '1' /f
 
+	# Process Mitigation Stuff
+	set-processmitigation -system -enable DEP
+	set-processmitigation -system -enable CFG
+
 }
 
 
