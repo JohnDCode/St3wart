@@ -2,13 +2,11 @@
 To do before R1:
 
 
-2. New uncat script for misc stuff / checklist
 3. Fix file baselines scripts & tactics / checklist
 4. Permissions script
-
-5. Test everything
 
 
 Should do before R2:
 6. New LGPOS
+7. Crit service stuff
 
