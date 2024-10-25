@@ -2,7 +2,6 @@
 To do before R1:
 
 
-1. Integrate Donkey's stuff
 2. New uncat script for misc stuff / checklist
 3. Fix file baselines scripts & tactics / checklist
 4. Permissions script
