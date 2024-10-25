@@ -404,8 +404,7 @@ foreach($user in $auditedSysUsers) {
 }
 
 
-
-# Only addition for CP 17
+# CP-17 Additions
 # Managing user accounts password never expiring
 
 $allUsers = Get-LocalUser | Select-Object -ExpandProperty Name
@@ -433,6 +432,36 @@ if ($confirm -eq "Y") {
 		}
 	}
 }
+
+
+
+
+
+# Managing user accounts not being able to change their password
+
+$allUsers = Get-LocalUser | Select-Object -ExpandProperty Name
+
+# Confirm that the main admin wants to ensure all users can change their password
+$confirm = Read-Host -Prompt "Would you like to ensure each user can change their password? (Y/N)"
+
+
+# If the user does wish to change password change policies, cycle through each user
+if ($confirm -eq "Y") {
+	foreach($user in $allUsers) {
+		# There will never be a situation where the password should expire on the WDAGUtility Account
+		
+		# Make the password to be able to be changed
+		net user $user /PasswordChg:Yes
+  		if ($?) {
+    		Add-Content .\log.txt "`nAction $actionNumber. $user password can be changed (Success)"
+	   		$actionNumber += 1
+		} else {
+			Add-Content .\log.txt "`nAction $actionNumber. $user password can be changed (Fail)"
+	   		$actionNumber += 1
+		}
+	}
+}
+
 
 
 
