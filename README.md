@@ -3,4 +3,4 @@ Windows script for the Air Force's CyberPatriot syshardening competition, create
 
 This script was created at the beginning of the CyberPatriot XVI season, and is continuously updated. 
 
-This script and its contained resources are to be used only by Faith Lutheran High School's, Crusader Cyber Defense Varsity team by JohnDavid Abe and/or other authorized users. 
+This script and its contained resources are to be used only by Faith Lutheran High School's, Crusader Cyber Defense Varsity team (17-1369), by JohnDavid Abe and/or other authorized users. 
