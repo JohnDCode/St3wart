@@ -158,7 +158,7 @@ void exportFilesRecursively(FILE *exportFile, const char *currentPath) {
 
             // Ensure the file path is not from the excluded directories
             if ((strstr(filePath, "C:/Windows/servicing") == NULL) && (strstr(filePath, "C:/Windows/WinSxS") == NULL)) {
-                
+  
                 // Write the file path to the exportation file
                 fprintf(exportFile, "%s\n", filePath);
                 

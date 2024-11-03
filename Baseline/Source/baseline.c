@@ -97,7 +97,7 @@ void exportFilesRecursively(FILE *csvFile, const char *currentPath) {
             snprintf(filePath, sizeof(filePath), "%s/%s", currentPath, entry->d_name);
 
             // Write the full path to the output file
-            if ((strstr(filePath, "C:/Windows/servicing") == NULL) && (strstr(filePath, "C:/Windows/WinSxS") == NULL)) {
+            if ((strstr(filePath, "C:/Windows/servicing") == NULL) && (strstr(filePath, "C:/Windows/WinSxS") == NULL) && (strstr(filePath, "C:/Windows/SoftwareDistribution") == NULL) && (strstr(filePath, "C:/Windows/assembly/NativeImages_") == NULL)) {
                 
 
                 // Get the SHA-256 hash of the file

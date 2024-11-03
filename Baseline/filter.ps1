@@ -13,6 +13,8 @@ $outputFile = Read-Host -Prompt "Path to file to filter"
 
 $outputContent = Get-Content $outputFile
 
+
+# Filter out files not signed by microsoft
 foreach($line in $outputContent) {
 	try {
         $signature = Get-AuthenticodeSignature -FilePath $line
@@ -27,3 +29,49 @@ foreach($line in $outputContent) {
         Write-Host "Error: $_"
     }
 }
+
+
+
+# Sort files by file extension
+
+
+# Get the now filtered content
+$filePaths = Get-Content $outputFile
+
+# Create separate lists based on file types
+$exeFiles = @()
+$scriptFiles = @()
+$msiFiles = @()
+$dllFiles = @()
+$txtFiles = @()
+
+$otherFiles = @()
+
+
+
+# Classify each file path based on its extension
+foreach ($path in $filePaths) {
+    if ($path -match "\.exe$") {
+        $exeFiles += $path
+    } elseif (($path -match "\.ps1$") -or ($path -match "\.bat$") -or ($path -match "\.vbs$") -or ($path -match "\.cmd$")) {
+        $scriptFiles += $path
+    } elseif ($path -match "\.msi$") {
+        $msiFiles += $path
+    } elseif ($path -match "\.dll$") {
+        $dllFiles += $path
+    } elseif ($path -match "\.txt$") {
+        $txtFiles += $path
+    } else {
+        $otherFiles += $path
+    }
+}
+
+# Combine the lists in the desired order
+$sortedFilePaths = $exeFiles + $scriptFiles + $msiFiles + $dllFiles + $txtFiles + $otherFiles
+
+# Overwrite the input file with the sorted paths
+$sortedFilePaths | Set-Content -Path $outputFile
+
+Write-Output "File paths have been filtered / sorted and saved back to $filePath"
+
+

@@ -232,7 +232,7 @@ $confirm = Read-Host -Prompt "Would you like to reset all passwords to a secure 
 if ($confirm -eq "Y") {
 	foreach($user in $auditedSysUsers) {
 		# There will never be a situation where one should change the password of (your) the main admin account, or a builtin account
-		if(($defaultUsers.contains($user)) -or ($user -eq $mainAdmin)) {
+		if(($defaultUsers.contains($user))) {
 			continue
 		}
 		
