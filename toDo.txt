@@ -2,9 +2,8 @@
 To do before R1:
 
 
-3. Fix file baselines scripts & tactics / checklist
-4. Permissions script
-
 
 - Maybe fix LGPO's
-
+- Tf is up with baselining
+- Permissions script
+- Crit service stuff
