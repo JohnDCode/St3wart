@@ -4,10 +4,7 @@ To do before R1:
 
 3. Fix file baselines scripts & tactics / checklist
 4. Permissions script
-5. Firewall rules on shields script?
 
 
-Should do before R2:
-6. New LGPOS
-7. Crit service stuff
+- Maybe fix LGPO's
 
