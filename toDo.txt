@@ -1,9 +1,6 @@
-
-To do before R1:
-
+Areas to improve:
 
 
-- Maybe fix LGPO's
-- Tf is up with baselining
-- Permissions script
-- Crit service stuff
+- Uncat (perms included)
+- File system vulns (make baseline faster and scan C:/Windows entirety instead of just system32 and make clear checklist for this stuff)
+- App sec
