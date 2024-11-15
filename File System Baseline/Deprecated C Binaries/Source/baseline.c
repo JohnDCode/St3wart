@@ -101,12 +101,12 @@ void exportFilesRecursively(FILE *csvFile, const char *currentPath) {
                 
 
                 // Get the SHA-256 hash of the file
-                char sha256[65];
-                calculateSHA256(filePath, sha256);
+                //char sha256[65];
+                //calculateSHA256(filePath, sha256);
 
 
                 // Write the file path and hash to the CSV (FilePath, Hash)
-                fprintf(csvFile, "%s,%s\n", filePath, sha256);
+                fprintf(csvFile, "%s,%s\n", filePath, "no hash");
                 
             }
 

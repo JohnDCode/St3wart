@@ -7,7 +7,7 @@
 
 
 # Get all files recursively and filter based on the function
-$files = Get-ChildItem C:/Windows -Recurse -Force -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
+$files = Get-ChildItem C:/Windows -Recurse -Force -File -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
 
 
 
