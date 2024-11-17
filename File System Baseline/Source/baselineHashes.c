@@ -13,7 +13,6 @@
 
 void modifyHeader(const char *filename);
 void baselineHashes(const char *filename);
-void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *addFile);
 
 
 // Add hashes to the baseline csv
@@ -22,52 +21,14 @@ int main() {
     // Record the start time of the script to measure execution time
     clock_t start_time = clock();
 
-    // Csv to add hashes too (system files)
-    const char *systemPath = "system.csv";
+    // Csv to add hashes too
+    const char *baselinePath = "baseline.csv";
 
-    // Csv from baseline
-    const char *basePath = "baseline.csv";
+    // Add collumn for hashes in baseline csv
+    modifyHeader(baselinePath);
 
-    // Export file for added files
-    const char *addPath = "added.txt";
-
-
-
-    // Add collumn for hashes in system csv
-    //modifyHeader(systemPath);
-
-    // Add the hashes to the system csv
-    //baselineHashes(systemPath);
-
-
-
-
-
-
-    FILE *baseFile = fopen(basePath, "r");
-    if (!baseFile) {
-        perror("Unable to open base file");
-        exit(EXIT_FAILURE);
-    }
-
-
-    FILE *sysFile = fopen(systemPath, "r");
-    if (!sysFile) {
-        perror("Unable to open sys file");
-        exit(EXIT_FAILURE);
-    }
-
-
-    FILE *addFile = fopen(addPath, "w");
-    if (!addFile) {
-        perror("Unable to open add file");
-        exit(EXIT_FAILURE);
-    }
-
-
-    // Baseline
-    compareFiles(baseFile, sysFile, addFile);
-    
+    // Add the hashes to the csv
+    baselineHashes(baselinePath);
 
 
   
@@ -246,134 +207,4 @@ void baselineHashes(const char *filename) {
     // Close the files
     fclose(temp_file);
     fclose(output_file);
-}
-
-
-
-
-// Remove any new line charcters from a string (used to format for comparison)
-void removeNewline(char *str) {
-    char *pos;
-    if ((pos = strchr(str, '\n')) != NULL) {
-        *pos = '\0';
-    }
-}
-
-
-
-int containsString(FILE *file, const char *str) {
-    if (file == NULL || str == NULL) {
-        return 0;
-    }
-
-    size_t str_len = strlen(str);
-    if (str_len == 0) {
-        return 0;
-    }
-
-    // Allocate a buffer to read the file in chunks
-    const size_t buffer_size = 1024;
-    char buffer[buffer_size + 1]; // +1 for null terminator
-
-    // Set the file position to the beginning
-    fseek(file, 0, SEEK_SET);
-
-    size_t read_len;
-    while ((read_len = fread(buffer, 1, buffer_size, file)) > 0) {
-        buffer[read_len] = '\0'; // Null-terminate the buffer
-
-        // Check if the string is in the buffer
-        if (strstr(buffer, str) != NULL) {
-            return 1;
-        }
-
-        // Move the file position back to account for potential split of the target string across buffer boundaries
-        if (read_len == buffer_size) {
-            fseek(file, -((long)str_len - 1), SEEK_CUR);
-        }
-    }
-
-    return 0;
-}
-
-
-
-
-// Function to compare system export and baseline, then write differences to proper files for logging
-void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *addFile) {
-
-    // Write titles to added and modified exportation files
-    fprintf(addFile, "Added Files from Baseline: \n\n");
-
-
-    // Used to hold each path to the system files and the corresponding lines in the baseline
-    char line[1000];
-    int matchCheck;
-    int isFirstLine = 1;
-
-
-    // Read lines from the system files and check if each line is contained in the baseline
-    while (fgets(line, sizeof(line), systemFile) != NULL) {
-	
-	if(isFirstLine) {
-		isFirstLine = 0;
-		continue;
-	}
-
-	// Counter for quotes
-    	int quoteCount = 0;
-    
-    	// Iterate over the line to find the end of the second entry
-    	for (int i = 0; line[i] != '\0'; i++) {
-        	if (line[i] == '\"') {
-            		quoteCount++;
-            		if (quoteCount == 4) {
-                		// Null-terminate the string after the second entry
-                		line[i + 1] = '\0';
-                		break;
-            		}
-        	}
-    	}
-
-
-        // Search for a match in the baseline
-        matchCheck = containsString(baselineFile, line);
-
-        // If no match is found
-        if (matchCheck == 0) {
-
-  		// Variables to hold the extracted parts
-    		char firstEntry[256];
-    		char secondEntry[256];
-    		char filePath[512];
-    
-    		// Pointer to help with parsing
-    		char *token;
-    		const char *delimiter = "\",\"";
-    
-    		// Get the first entry
-    		token = strtok(line, delimiter);
-    		if (token != NULL) {
-        		// Remove leading and trailing quotes from the first entry
-        		strncpy(firstEntry, token + 1, strlen(token) - 2);
-        		firstEntry[strlen(token) - 2] = '\0';
-    		}
-
-    		// Get the second entry
-    		token = strtok(NULL, delimiter);
-    		if (token != NULL) {
-        		// Remove the trailing quote from the second entry
-        		strncpy(secondEntry, token, strlen(token) - 1);
-        		secondEntry[strlen(token) - 1] = '\0';
-    		}
-
-    		// Combine the entries into a single file path
-    		snprintf(filePath, sizeof(filePath), "%s\\%s", secondEntry, firstEntry);
-   
-
-            	// Line is not contained in the baseline, write to the added output file
-            	fprintf(addFile, "%s\n", filePath);
-
-        }
-    }
 }
