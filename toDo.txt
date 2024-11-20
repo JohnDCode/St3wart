@@ -4,3 +4,16 @@ Areas to improve:
 - Uncat (perms included)
 - File system vulns (make baseline faster and scan C:/Windows entirety instead of just system32 and make clear checklist for this stuff)
 - App sec
+
+
+
+
+
+Before States:
+
+
+- Fix defensive countermeasures
+- Fix checklist stuff (specifically for prohibited files)
+- Fix baseline script for C:\Windows
+- More crit service configs
+
