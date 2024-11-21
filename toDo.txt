@@ -12,7 +12,6 @@ Areas to improve:
 Before States:
 
 
-- Fix defensive countermeasures
 - Fix checklist stuff (specifically for prohibited files)
 - Fix baseline script for C:\Windows
 - More crit service configs
