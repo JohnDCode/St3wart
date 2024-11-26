@@ -5,72 +5,101 @@
 #include <limits.h>
 #include <time.h>
 #include <math.h>
-#include "sha256.h"
-
-// Buffer size to hold files in memory
-#define BUFFER_SIZE 2048
 
 
-void modifyHeader(const char *filename);
-void baselineHashes(const char *filename);
-void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *addFile);
+
+// Forward declare methods
+void removeNewline(char *str);
+char *isLineContained(char *line, FILE *file);
+void compareBaselines(FILE *baselineFile, FILE *systemFile, FILE *addFile);
+void filterFilePaths(FILE *inputFile, FILE *exportFile);
 
 
-// Add hashes to the baseline csv
+
+// Get the files in the specified directory, and find files that have been added/modified wihtin such, based on the last baseline
 int main() {
 
     // Record the start time of the script to measure execution time
     clock_t start_time = clock();
 
-    // Csv to add hashes too (system files)
-    const char *systemPath = "system.csv";
+    // Path to directory to scan
+    const char *directoryPath = "C:/Windows"; 
 
-    // Csv from baseline
-    const char *basePath = "baseline.csv";
+    // Path for all system files
+    const char *systemPath = "./Output/system.csv";
 
-    // Export file for added files
-    const char *addPath = "added.txt";
+    // Path for all baselined files
+    const char *baselinePath = "./Baselines/baseline.csv";
 
+    // Path to export filtered out files by c binary
+    const char *filterPath = "./Output/filter.csv";
 
-
-    // Add collumn for hashes in system csv
-    //modifyHeader(systemPath);
-
-    // Add the hashes to the system csv
-    //baselineHashes(systemPath);
+    // Path to export all added files between system and last baseline
+    const char *addPath = "./Output/added.txt";
 
 
-
-
-
-
-    FILE *baseFile = fopen(basePath, "r");
-    if (!baseFile) {
-        perror("Unable to open base file");
+    // Open System CSV (to read)
+    FILE *systemFile = fopen(systemPath, "r");
+    if (systemFile == NULL) {
+        perror("Error opening system file");
         exit(EXIT_FAILURE);
     }
 
 
-    FILE *sysFile = fopen(systemPath, "r");
-    if (!sysFile) {
-        perror("Unable to open sys file");
+    // Open Filter CSV (to write only here cause filtering first)
+    FILE *filterFileWrite = fopen(filterPath, "w");
+    if (filterFileWrite == NULL) {
+        perror("Error opening filter file write");
         exit(EXIT_FAILURE);
     }
 
 
+    // Open Baseline CSV (to read)
+    FILE *baselineFile = fopen(baselinePath, "r");
+    if (baselineFile == NULL) {
+        perror("Error opening baseline file");
+        exit(EXIT_FAILURE);
+    }
+
+
+    // Open ADD output txt (to write)
     FILE *addFile = fopen(addPath, "w");
-    if (!addFile) {
-        perror("Unable to open add file");
+    if (addFile == NULL) {
+        perror("Error opening add file");
         exit(EXIT_FAILURE);
     }
 
 
-    // Baseline
-    compareFiles(baseFile, sysFile, addFile);
+
+
+    // Sort out false positives based on file paths before even diff takes place
+    filterFilePaths(systemFile, filterFileWrite);
+    fclose(filterFileWrite);
+
+
+
+    // Open Filter CSV (to read this time, now using filter to diff)
+    FILE *filterFileRead = fopen(filterPath, "r");
+    if (filterFileRead == NULL) {
+        perror("Error opening filter file read");
+        exit(EXIT_FAILURE);
+    }
+
+    // Diff
+    compareBaselines(baselineFile, filterFileRead, addFile);
+
+
+
+
+    // Close all of the files used
+    fclose(systemFile);
+    fclose(filterFileRead);
+    fclose(baselineFile);
+    fclose(addFile);
     
 
 
-  
+
     // Record end time and use start time to get execution time
     clock_t end_time = clock();
     double elapsed_time = ((double) (end_time - start_time)) / CLOCKS_PER_SEC;
@@ -80,172 +109,6 @@ int main() {
     printf("Time taken: %.4f seconds\n", elapsed_time);
 
     return 0;
-}
-
-
-
-
-// Get the SHA256 hash of a file using https://github.com/B-Con/crypto-algorithms/tree/master
-void calculateSHA256(const char *filePath, char *result) {
-
-    // Open the file
-    FILE *file = fopen(filePath, "rb");
-
-    // Ensure the file could be opened
-    if (!file) {
-        // Write to console that the file couldn't be opened
-        printf("Error opening file %s\n", filePath);
-
-        // Return and set the hash to "NULL" ("NULL" will be written to the CSV as well)
-        strcpy(result, "NULL");
-        return;
-    }
-
-    // Use sha256.c to get the file hash
-    SHA256_CTX sha256Context;
-    sha256_init(&sha256Context);
-
-    char buffer[BUFFER_SIZE];
-    size_t bytesRead;
-
-    while ((bytesRead = fread(buffer, 1, BUFFER_SIZE, file)) > 0) {
-        sha256_update(&sha256Context, buffer, bytesRead);
-    }
-
-
-    // Close the file
-    fclose(file);
-
-    unsigned char hash[SHA256_BLOCK_SIZE];
-    sha256_final(&sha256Context, hash);
-
-    // Convert the binary hash to a hexadecimal string
-    for (int i = 0; i < SHA256_BLOCK_SIZE; i++) {
-        sprintf(result + 2 * i, "%02x", hash[i]);
-    }
-
-    // Null-terminate the hexadecimal string
-    result[64] = '\0';  
-}
-
-
-
-
-// Function to trim newline characters from strings
-void trim_newline(char *str) {
-    size_t len = strlen(str);
-    if (len > 0 && str[len - 1] == '\n') {
-        str[len - 1] = '\0';
-    }
-}
-
-
-
-
-// Function to modify the header of the CSV file
-void modifyHeader(const char *filename) {
-
-    // Open the csv
-    FILE *file = fopen(filename, "r+");
-    if (!file) {
-        perror("Unable to open file");
-        exit(EXIT_FAILURE);
-    }
-
-    // Read the first line (header)
-    char header[512];
-    if (fgets(header, sizeof(header), file)) {
-
-        // Add to the header
-        trim_newline(header);
-        strcat(header, ", Hashes\n");
-
-        // Move the file pointer to the beginning and overwrite the header
-        fseek(file, 0, SEEK_SET);
-        fprintf(file, "%s", header);
-    }
-
-    // Close the baseline csv
-    fclose(file);
-}
-
-
-
-
-// Function to concatenate each baseline entry with hash of the file
-void baselineHashes(const char *filename) {
-
-    // Open the baseline csv
-    FILE *file = fopen(filename, "r");
-    if (!file) {
-        perror("Unable to open file");
-        exit(EXIT_FAILURE);
-    }
-
-    // Temporary file to store the modified content
-    FILE *temp_file = tmpfile();
-    if (!temp_file) {
-        perror("Unable to create temporary file");
-        fclose(file);
-        exit(EXIT_FAILURE);
-    }
-
-    char line[512];
-    char name[256], path[256];
-    int isFirstLine = 1;
-
-    // Loop over the csv
-    while (fgets(line, sizeof(line), file)) {
-
-        // Skip the first line
-        if (isFirstLine) {
-            isFirstLine = 0;
-            fprintf(temp_file, "%s", line); // Copy the header as is
-            continue;
-        }
-
-        // Parse the CSV line
-        sscanf(line, "\"%[^\"]\",\"%[^\"]", name, path);
-
-        // Construct the full path
-        char fullPath[512];
-        snprintf(fullPath, sizeof(fullPath), "%s\\%s", path, name);
-
-        // Get the hash with the full path
-	trim_newline(fullPath);
-        char fileHash[65];
-        calculateSHA256(fullPath, fileHash);
-
-        // Trim newline character, add the file hash in seperate collumn, add back new line character
-        trim_newline(line);
-        strcat(line, ", ");
-	strcat(line, fileHash);
-	strcat(line, "\n");
-
-        // Write the modified line to the temporary file
-        fprintf(temp_file, "%s", line);
-    }
-
-    // Close the main csv
-    fclose(file);
-
-    // Write the modified content back to the original file
-    FILE *output_file = fopen(filename, "w");
-    if (!output_file) {
-        perror("Unable to open file for writing");
-        fclose(temp_file);
-        exit(EXIT_FAILURE);
-    }
-
-    rewind(temp_file); // Rewind the temporary file to the beginning
-
-    while (fgets(line, sizeof(line), temp_file)) {
-        fprintf(output_file, "%s", line);
-    }
-
-    // Close the files
-    fclose(temp_file);
-    fclose(output_file);
 }
 
 
@@ -261,119 +124,87 @@ void removeNewline(char *str) {
 
 
 
-int containsString(FILE *file, const char *str) {
-    if (file == NULL || str == NULL) {
-        return 0;
-    }
 
-    size_t str_len = strlen(str);
-    if (str_len == 0) {
-        return 0;
-    }
+// Checks if a line is contained in a file
+char *isLineContained(char *line, FILE *file) {
 
-    // Allocate a buffer to read the file in chunks
-    const size_t buffer_size = 1024;
-    char buffer[buffer_size + 1]; // +1 for null terminator
+    // Buffer size to hold lines in memory
+    char buffer[1000];
 
-    // Set the file position to the beginning
+    // Reset file position to the beginning
     fseek(file, 0, SEEK_SET);
 
-    size_t read_len;
-    while ((read_len = fread(buffer, 1, buffer_size, file)) > 0) {
-        buffer[read_len] = '\0'; // Null-terminate the buffer
+    // Remove newline character from the given line to compare properly
+    removeNewline(line);
 
-        // Check if the string is in the buffer
-        if (strstr(buffer, str) != NULL) {
-            return 1;
-        }
+    while (fgets(buffer, sizeof(buffer), file) != NULL) {
 
-        // Move the file position back to account for potential split of the target string across buffer boundaries
-        if (read_len == buffer_size) {
-            fseek(file, -((long)str_len - 1), SEEK_CUR);
+        // Remove newline character from the line in the file
+        removeNewline(buffer);
+
+        // Check if line is contained in the file
+        if (strstr(buffer, line) != NULL) {
+
+            // Return the line found with the stirng
+            char *result = (char *)malloc(strlen(buffer) + 1);
+            strcpy(result, buffer);
+            return result;
         }
     }
 
-    return 0;
+
+    // Line is not contained in the file so return NULL
+    return NULL;
 }
 
 
 
+void filterFilePaths(FILE *inputFile, FILE *exportFile) {
 
-// Function to compare system export and baseline, then write differences to proper files for logging
-void compareFiles(FILE *baselineFile, FILE *systemFile, FILE *addFile) {
+    // Buffer to hold each line
+    char line[2048];
 
-    // Write titles to added and modified exportation files
-    fprintf(addFile, "Added Files from Baseline: \n\n");
+    // Read each line from the input file
+    while (fgets(line, sizeof(line), inputFile) != NULL) {
+
+        // Check if the line contains the file path flags
+        if ((strstr(line, "C:\\Windows\\servicing") == NULL) && (strstr(line, "C:\\Windows\\WinSxS") == NULL) && (strstr(line, "C:\\Windows\\SoftwareDistribution") == NULL) && (strstr(line, "C:\\Windows\\assembly\\NativeImages_") == NULL)) {
+
+            // Write the line to the export file
+            fprintf(exportFile, "%s", line);
+        }
+    }
+
+}
+
+
+
+void compareBaselines(FILE *baseFile, FILE *sysFile, FILE *addExportFile) {
+
+    // Write title to added exportation file
+    fprintf(addExportFile, "Added Files from Baseline: \n\n");
 
 
     // Used to hold each path to the system files and the corresponding lines in the baseline
     char line[1000];
-    int matchCheck;
-    int isFirstLine = 1;
+    char *matchLine;
 
 
-    // Read lines from the system files and check if each line is contained in the baseline
-    while (fgets(line, sizeof(line), systemFile) != NULL) {
-	
-	if(isFirstLine) {
-		isFirstLine = 0;
-		continue;
-	}
+    // Read lines from the sys backup and check if each line is contained in the base backup
+    while (fgets(line, sizeof(line), sysFile) != NULL) {
 
-	// Counter for quotes
-    	int quoteCount = 0;
-    
-    	// Iterate over the line to find the end of the second entry
-    	for (int i = 0; line[i] != '\0'; i++) {
-        	if (line[i] == '\"') {
-            		quoteCount++;
-            		if (quoteCount == 4) {
-                		// Null-terminate the string after the second entry
-                		line[i + 1] = '\0';
-                		break;
-            		}
-        	}
-    	}
-
-
-        // Search for a match in the baseline
-        matchCheck = containsString(baselineFile, line);
+        // Search for a match in the base backup
+        matchLine = isLineContained(line, baseFile);
 
         // If no match is found
-        if (matchCheck == 0) {
+        if (matchLine == NULL) {
 
-  		// Variables to hold the extracted parts
-    		char firstEntry[256];
-    		char secondEntry[256];
-    		char filePath[512];
-    
-    		// Pointer to help with parsing
-    		char *token;
-    		const char *delimiter = "\",\"";
-    
-    		// Get the first entry
-    		token = strtok(line, delimiter);
-    		if (token != NULL) {
-        		// Remove leading and trailing quotes from the first entry
-        		strncpy(firstEntry, token + 1, strlen(token) - 2);
-        		firstEntry[strlen(token) - 2] = '\0';
-    		}
-
-    		// Get the second entry
-    		token = strtok(NULL, delimiter);
-    		if (token != NULL) {
-        		// Remove the trailing quote from the second entry
-        		strncpy(secondEntry, token, strlen(token) - 1);
-        		secondEntry[strlen(token) - 1] = '\0';
-    		}
-
-    		// Combine the entries into a single file path
-    		snprintf(filePath, sizeof(filePath), "%s\\%s", secondEntry, firstEntry);
-   
-
-            	// Line is not contained in the baseline, write to the added output file
-            	fprintf(addFile, "%s\n", filePath);
+            // Line is not contained in the baseline, write to the added output file
+            fprintf(addExportFile, "%s\n", line);
 
         }
+
     }
+
 }
+

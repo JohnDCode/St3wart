@@ -1,8 +1,0 @@
-!folder: C:\Windows
-
-
-C:\Windows\servicing
-C:\Windows\WinSxS
-
-C:\Windows\SoftwareDistribution
-C:\Windows\assemblyNativeImages... (32 and 64 bit folders)
