@@ -336,12 +336,12 @@ if ($confirm -eq "Y") {
 	# Remove Defender Exclusions
 
 	Write-Host "REMOVING PREFS: " -ForegroundColor Green
-	# Remove-MpPreference -AttackSurfaceReductionRules_Ids * -AttackSurfaceReductionRules_Actions * -AttackSurfaceReductionOnlyExclusions *
+	Remove-MpPreference -AttackSurfaceReductionRules_Ids * -AttackSurfaceReductionRules_Actions * -AttackSurfaceReductionOnlyExclusions *
 	Remove-MpPreference -ExclusionPath *
 	Remove-MpPreference -ExclusionExtension *
 	Remove-MpPreference -ExclusionProcess *
 	Remove-MpPreference -ExclusionIpAddress *
-	# Remove-MpPreference -ThreatIDDefaultAction_Ids * -ThreatIDDefaultAction_Actions *
+	Remove-MpPreference -ThreatIDDefaultAction_Ids * -ThreatIDDefaultAction_Actions *
 	Remove-MpPreference -ControlledFolderAccessAllowedApplications * -ControlledFolderAccessProtectedFolders *
 
 
@@ -394,11 +394,3 @@ if ($confirm -eq "Y") {
 	
 
 }
-
-
-# Parts of the firewall yet to be looked into
-# AllowInboundRules                            
-# AllowUserApps                   
-# AllowUserPorts             
-# EnableStealthModeForIPsec                                
-# DisabledInterfaceAliases
