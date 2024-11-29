@@ -1,9 +1,0 @@
-
-Before States:
-
-
-- Fix checklist stuff (specifically for prohibited files)
-- More crit service configs
-
-- Defender stuff?
-
