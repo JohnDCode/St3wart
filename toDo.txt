@@ -1,2 +1,12 @@
-crit services?
-STIGS?
+- Fix defender script and strategies (script, reg keys, etc)
+- Apply basleine to other folders as well
+
+- Check domain controller GPO
+
+
+- Permissions?
+
+- Service auditing --> add more bad + good services from dud github
+
+
+- Make more offiical prohibited file and unwanted software strateigies
