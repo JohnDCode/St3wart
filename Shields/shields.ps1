@@ -328,7 +328,7 @@ if ($confirm -eq "Y") {
 	Set-MpPreference -SignatureScheduleDay "Everyday"
 	Set-MpPreference -SignatureUpdateCatchupInterval 0
 	Set-MpPreference -SubmitSamplesConsent "NeverSend"
-	Set-MpPreference -UILockdown $true
+	Set-MpPreference -UILockdown $false
 	Set-MpPreference -UnknownThreatDefaultAction "Remove"
 
 
