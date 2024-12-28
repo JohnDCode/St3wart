@@ -104,7 +104,7 @@ if ($confirm -eq "Y") {
 	Set-NetFirewallProfile -Name Public -LogIgnored True
 
 	# Turn on response to multicast
-	Set-NetFirewallProfile -Name Public -AllowUnicastResponseToMulticast True
+	Set-NetFirewallProfile -Name Public -AllowUnicastResponseToMulticast False
 
 	# Disallow local connection security rules
 	Set-NetFirewallProfile -Name Public -AllowLocalFirewallRules False
@@ -148,7 +148,7 @@ if ($confirm -eq "Y") {
 	Set-NetFirewallProfile -Name Private -LogIgnored True
 
 	# Turn on response to multicast
-	Set-NetFirewallProfile -Name Private -AllowUnicastResponseToMulticast True
+	Set-NetFirewallProfile -Name Private -AllowUnicastResponseToMulticast False
 
 	Add-Content .\log.txt "`nAction $actionNumber. Ran hardening script for private profile:"
 	Add-Content .\log.txt ""
@@ -188,7 +188,7 @@ if ($confirm -eq "Y") {
 	Set-NetFirewallProfile -Name Domain -LogIgnored True
 
 	# Turn on response to multicast
-	Set-NetFirewallProfile -Name Domain -AllowUnicastResponseToMulticast True
+	Set-NetFirewallProfile -Name Domain -AllowUnicastResponseToMulticast False
 
 	Add-Content .\log.txt "`nAction $actionNumber. Ran hardening script for domain profile:"
 	Add-Content .\log.txt ""

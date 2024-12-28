@@ -10,3 +10,4 @@
 
 
 - Make more offiical prohibited file and unwanted software strateigies
+- Then configs go brrrrrrrrrrrr
