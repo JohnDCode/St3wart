@@ -1,0 +1,56 @@
+Include /etc/ssh/sshd_config.d/*.conf
+KbdInteractiveAuthentication no
+UsePAM yes
+X11Forwarding no
+PrintMotd yes
+Banner /etc/issue.net
+AcceptEnv no
+AddressFamily inet
+AllowAgentForwarding no
+AllowTcpForwarding no
+Ciphers chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com
+ClientAliveCountMax 1
+ClientAliveInterval 180
+Compression no
+GatewayPorts no
+GSSAPIAuthentication no
+HostbasedAuthentication no
+IgnoreRhosts yes
+IgnoreUserKnownHosts yes
+KerberosAuthentication no
+LoginGraceTime 30
+LogLevel VERBOSE
+AllowStreamLocalForwarding no
+AuthenticationMethods publickey password
+CASignatureAlgorithms rsa-sha2-512,rsa-sha2-256 # Remove on old versions of sshd
+DisableForwarding yes
+ExposeAuthInfo no
+FingerprintHash sha256
+ForceCommand none
+KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group16-sha512
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com
+MaxAuthTries 3
+MaxSessions 3
+MaxStartups 10:30:100
+PasswordAuthentication yes
+PermitEmptyPasswords no
+PermitRootLogin no
+PermitTTY no
+PermitTunnel no
+PermitUserEnvironment no
+PermitUserRc no
+PerSourceMaxStartups 1 # Remove on old versions of sshd
+PerSourceNetBlockSize 32:128 # Remove on old versions of sshd
+PrintLastLog yes
+PubkeyAuthOptions verify-required # Remove on old versions of sshd
+PubkeyAuthentication yes
+#RemoveJoeyFromTeam yes
+StreamLocalBindUnlink no
+StreamLocalBindMask 0177
+StrictModes yes
+SyslogFacility AUTH
+TCPKeepAlive no
+UseDNS yes
+VersionAddendum none
+Protocol 2
+X11UseLocalhost yes # V-260530
