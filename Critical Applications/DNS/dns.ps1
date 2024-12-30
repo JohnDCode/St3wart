@@ -20,12 +20,6 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNS\Parameters" /v
 
 
 
-# Restart DNS
-net stop DNS
-net start DNS
-
-
-
 # Configure reg keys
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters" /v SupportedEncryptionTypes /t REG_DWORD /d 2147483640 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 0 /f
@@ -64,64 +58,81 @@ Set-DnsServerDiagnostics EnableLoggingForZoneLoadingEvent $true
 
 
 
-# Restart DNS
+
+
+
+# Restart DNS to apply config
 net stop DNS
 net start DNS
 
 
 
 # DNS config spam
+
+# From STIG
 dnscmd /config /EnableVersionQuery 0
-dnscmd /config /enablednssec 1
-dnscmd /config /retrieveroottrustanchors
+
+
+# From Microsoft Docs (Server-Level config)
 dnscmd /config /addressanswerlimit 5
 dnscmd /config /bindsecondaries 0
 dnscmd /config /bootmethod 3
 dnscmd /config /defaultagingstate 1
 dnscmd /config /defaultnorefreshinterval 0xA8
-dnscmd /config /defaultrefreshinterval  0xA8
-dnscmd /config /disableautoreversezones  1
+dnscmd /config /defaultrefreshinterval 0xA8
+dnscmd /config /disableautoreversezones 1
 dnscmd /config /disablensrecordsautocreation 1
 dnscmd /config /dspollinginterval 30
 dnscmd /config /dstombstoneinterval 30
-dnscmd /config /ednscachetimeout  604,800
+dnscmd /config /ednscachetimeout 604,800
+dnscmd /config /enableednsprobes 0
+dnscmd /config /enablednssec 1
+dnscmd /config /retrieveroottrustanchors
 dnscmd /config /enableglobalnamessupport 0
 dnscmd /config /enableglobalqueryblocklist 1
-dnscmd /config /globalqueryblocklist isatap wpad
 dnscmd /config /eventloglevel 4
 dnscmd /config /forwarddelegations 1
 dnscmd /config /forwardingtimeout 0x5
 dnscmd /config /globalneamesqueryorder 1
+dnscmd /config /globalqueryblocklist isatap wpad
 dnscmd /config /isslave 0
 dnscmd /config /localnetpriority 0
 dnscmd /config /logfilemaxsize 0xFFFFFFFF
-dnscmd /config /logipfilterlist 
+dnscmd /config /logipfilterlist
 dnscmd /config /loglevel 0xFFFF
 dnscmd /config /maxcachesize 10000
 dnscmd /config /maxcachettl 0x15180
 dnscmd /config /maxnegativecachettl 0x384
 dnscmd /config /namecheckflag 2
-dnscmd /config /norecursion 0
-dnscmd /config /recursionretry  0x3
-dnscmd /config /AllowUpdate 2
-dnscmd /config /recursionretry  0xF
-dnscmd /config /roundrobin  1  
+dnscmd /config /norecursion 1
+dnscmd /config /recursionretry 0x3
+dnscmd /config /roundrobin 1
+dnscmd /config /rpcprotocol 0x2
 dnscmd /config /scavenginginterval 0x0
 dnscmd /config /secureresponses 0
 dnscmd /config /sendport 0x0
-dnscmd /config /strictfileparsing  1
-dnscmd /config /updateoptions 0x30F  
-dnscmd /config /writeauthorityns  0
-dnscmd /config /xfrconnecttimeout    0x1E
-dnscmd /config /allowupdate 2
-dnscmd /config /enableednsprobes 0
-dnscmd /config /localnetprioritynetmask 0x0000ffff
-dnscmd /config /openaclonproxyupdates 0
-dnscmd /config /DisableNSRecordsAutoCreation 1
-dnscmd /config /enableglobalqueryblocklist 1
+dnscmd /config /strictfileparsing 1
+dnscmd /config /updateoptions 0x30F
+dnscmd /config /writeauthorityns 0
+dnscmd /config /xfrconnecttimeout 0x1E
 
 
 
-# Restart DNS 
+<# Ignored server level configurations:
+	Log path? (Not setting for now)
+	Notcp (According to microsoft docs has no effect)
+	Recurstiontimeout? (no docs on this)
+	Serverlevelplugindll (no custom dll available)
+#>
+
+
+
+
+
+# Additional configurations
+dnscmd /config /localnetprioritynetmask 0x0000FFFF
+
+
+# Restart DNS to apply config
 net stop DNS
 net start DNS
