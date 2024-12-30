@@ -78,8 +78,8 @@ dnscmd /config /addressanswerlimit 5
 dnscmd /config /bindsecondaries 0
 dnscmd /config /bootmethod 3
 dnscmd /config /defaultagingstate 1
-#dnscmd /config /defaultnorefreshinterval 0xA8
-#dnscmd /config /defaultrefreshinterval 0xA8
+dnscmd /config /defaultnorefreshinterval 0x50
+dnscmd /config /defaultrefreshinterval 0x50
 dnscmd /config /disableautoreversezones 1
 dnscmd /config /disablensrecordsautocreation 1
 dnscmd /config /dspollinginterval 30
@@ -91,7 +91,7 @@ dnscmd /config /retrieveroottrustanchors
 dnscmd /config /enableglobalnamessupport 0
 dnscmd /config /enableglobalqueryblocklist 1
 dnscmd /config /eventloglevel 4
-#dnscmd /config /forwarddelegations 0
+dnscmd /config /forwarddelegations 0
 dnscmd /config /forwardingtimeout 0x5
 dnscmd /config /globalneamesqueryorder 1
 dnscmd /config /globalqueryblocklist isatap wpad
