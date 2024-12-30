@@ -47,14 +47,14 @@ Set-DnsServerRecursion -SecureResponse $true
 
 
 # Configure DNS Server Diagnostics
-Set-DnsServerDiagnostics EnableLoggingForLocalLookupEvent $true
-Set-DnsServerDiagnostics EnableLoggingForPluginDllEvent $true
-Set-DnsServerDiagnostics EnableLoggingForRecursiveLookupEvent $true
-Set-DnsServerDiagnostics EnableLoggingForRemoteServerEvent $true
-Set-DnsServerDiagnostics EnableLoggingForServerStartStopEvent $true
-Set-DnsServerDiagnostics EnableLoggingForTombstoneEvent $true
-Set-DnsServerDiagnostics EnableLoggingForZoneDataWriteEvent $true
-Set-DnsServerDiagnostics EnableLoggingForZoneLoadingEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForLocalLookupEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForPluginDllEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForRecursiveLookupEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForRemoteServerEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForServerStartStopEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForTombstoneEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForZoneDataWriteEvent $true
+Set-DnsServerDiagnostics -EnableLoggingForZoneLoadingEvent $true
 
 
 
@@ -83,17 +83,17 @@ dnscmd /config /defaultrefreshinterval 0x50
 dnscmd /config /disableautoreversezones 1
 dnscmd /config /disablensrecordsautocreation 1
 dnscmd /config /dspollinginterval 30
-dnscmd /config /dstombstoneinterval 30
+dnscmd /config /dstombstoneinterval 30 # Did smth weird
 dnscmd /config /ednscachetimeout 604,800
 dnscmd /config /enableednsprobes 0
 dnscmd /config /enablednssec 1
-dnscmd /config /retrieveroottrustanchors
+dnscmd /config /retrieveroottrustanchors # Did smth weird
 dnscmd /config /enableglobalnamessupport 0
 dnscmd /config /enableglobalqueryblocklist 1
 dnscmd /config /eventloglevel 4
 dnscmd /config /forwarddelegations 0
 dnscmd /config /forwardingtimeout 0x5
-dnscmd /config /globalneamesqueryorder 1
+dnscmd /config /globalneamesqueryorder 1 # Did smth weird
 dnscmd /config /globalqueryblocklist isatap wpad
 dnscmd /config /isslave 0
 dnscmd /config /localnetpriority 0
