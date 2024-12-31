@@ -83,7 +83,7 @@ dnscmd /config /defaultrefreshinterval 0x50
 dnscmd /config /disableautoreversezones 1
 dnscmd /config /disablensrecordsautocreation 1
 dnscmd /config /dspollinginterval 30
-dnscmd /config /dstombstoneinterval 30 # Did smth weird
+dnscmd /config /dstombstoneinterval 0x3F480 # Did smth weird
 dnscmd /config /ednscachetimeout 604,800
 dnscmd /config /enableednsprobes 0
 dnscmd /config /enablednssec 1
