@@ -40,8 +40,8 @@ Set-DnsServerResponseRateLimiting -WindowInSec 7 -LeakRate 4 -TruncateRate 3 -Er
 # Configure Defender DNS policies
 Set-mppreference -DisableDnsOverTcpParsing $False
 Set-mppreference -DisableDnsParsing $False
-Set-mppreference -EnableDnsSinkhole $True
-Set-DnsServerRecursion -Enable $false
+#Set-mppreference -EnableDnsSinkhole $True
+#Set-DnsServerRecursion -Enable $false
 Set-DnsServerRecursion -SecureResponse $true
 
 
@@ -107,7 +107,9 @@ dnscmd /config /namecheckflag 2
 dnscmd /config /norecursion 1
 dnscmd /config /recursionretry 0x3
 dnscmd /config /roundrobin 1
-dnscmd /config /rpcprotocol 0x2
+
+#dnscmd /config /rpcprotocol 0x2
+
 dnscmd /config /scavenginginterval 0x0
 dnscmd /config /secureresponses 1
 dnscmd /config /sendport 0x0
