@@ -1,4 +1,4 @@
-- Fix defender script and strategies (script, reg keys, etc)
+x- Fix defender script and strategies (script, reg keys, etc)
 - Apply basleine to other folders as well
 
 - Check domain controller GPO
