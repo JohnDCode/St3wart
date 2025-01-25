@@ -9,7 +9,45 @@
 
 # Get all the files in C:\Windows using powershell
 
-$files = Get-ChildItem C:\Windows\ -Force -File -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
+
+Write-Host "Which folder to baseline?"
+$pathInput = Read-Host -Prompt "[1] Main (Windows) [2] Program Files [3] Program Files (x86) [4] Program Data"
+
+
+# Import csv baselines based on the input (move it to root baselines directory so c binary knows which one to use)
+switch ($pathInput) {
+    "1" {
+		$files = Get-ChildItem "C:\Windows\" -Force -File -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
+		Move-Item -Path ".\Baselines\Windows 10\Main\baseline.csv" -Destination ".\Baselines\Windows 10\baseline.csv"
+		Move-Item -Path ".\Baselines\Windows 11\Main\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
+		Move-Item -Path ".\Baselines\Sever 19\Main\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22\Main\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+ 	}
+
+    "2" {
+		$files = Get-ChildItem "C:\Program Files\" -Force -File -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
+		Move-Item -Path ".\Baselines\Windows 10\ProgramFiles\baseline.csv" -Destination ".\Baselines\Windows 10\baseline.csv"
+		Move-Item -Path ".\Baselines\Windows 11\ProgramFiles\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
+		Move-Item -Path ".\Baselines\Sever 19\ProgramFiles\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22\ProgramFiles\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+	}
+
+    "3" {
+		$files = Get-ChildItem "C:\Program Files (x86)\" -Force -File -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
+		Move-Item -Path ".\Baselines\Windows 10\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Windows 10\baseline.csv"
+		Move-Item -Path ".\Baselines\Windows 11\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
+		Move-Item -Path ".\Baselines\Sever 19\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+	}
+
+    "4" {
+		$files = Get-ChildItem "C:\ProgramData\" -Force -File -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
+		Move-Item -Path ".\Baselines\Windows 10\ProgramData\baseline.csv" -Destination ".\Baselines\Windows 10\baseline.csv"
+		Move-Item -Path ".\Baselines\Windows 11\ProgramData\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
+		Move-Item -Path ".\Baselines\Sever 19\ProgramData\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22\ProgramData\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+	}
+}
 
 
 # Save the files to a csv (with specific encoding so c binary can read it)
