@@ -22,6 +22,7 @@ switch ($pathInput) {
 		Move-Item -Path ".\Baselines\Windows 11\Main\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
 		Move-Item -Path ".\Baselines\Sever 19\Main\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
 		Move-Item -Path ".\Baselines\Server 22\Main\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22 (DC)\Main\baseline.csv" -Destination ".\Baselines\Server 22 (DC)\baseline.csv"
  	}
 
     "2" {
@@ -30,6 +31,7 @@ switch ($pathInput) {
 		Move-Item -Path ".\Baselines\Windows 11\ProgramFiles\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
 		Move-Item -Path ".\Baselines\Sever 19\ProgramFiles\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
 		Move-Item -Path ".\Baselines\Server 22\ProgramFiles\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22 (DC)\ProgramFiles\baseline.csv" -Destination ".\Baselines\Server 22 (DC)\baseline.csv"
 	}
 
     "3" {
@@ -38,6 +40,7 @@ switch ($pathInput) {
 		Move-Item -Path ".\Baselines\Windows 11\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
 		Move-Item -Path ".\Baselines\Sever 19\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
 		Move-Item -Path ".\Baselines\Server 22\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22 (DC)\ProgramFiles86\baseline.csv" -Destination ".\Baselines\Server 22 (DC)\baseline.csv"
 	}
 
     "4" {
@@ -46,6 +49,7 @@ switch ($pathInput) {
 		Move-Item -Path ".\Baselines\Windows 11\ProgramData\baseline.csv" -Destination ".\Baselines\Windows 11\baseline.csv"
 		Move-Item -Path ".\Baselines\Sever 19\ProgramData\baseline.csv" -Destination ".\Baselines\Server 19\baseline.csv"
 		Move-Item -Path ".\Baselines\Server 22\ProgramData\baseline.csv" -Destination ".\Baselines\Server 22\baseline.csv"
+		Move-Item -Path ".\Baselines\Server 22 (DC)\ProgramData\baseline.csv" -Destination ".\Baselines\Server 22 (DC)\baseline.csv"
 	}
 }
 
@@ -62,7 +66,7 @@ Write-Host ""
 
 # Read which baseline to load from input
 Write-Host "Which OS baseline would you like to import?"
-$osInput = Read-Host -Prompt "[1] Windows 10 [2] Windows 11 [3] Server 19 [4] Server 22"
+$osInput = Read-Host -Prompt "[1] Windows 10 [2] Windows 11 [3] Server 19 [4] Server 22 [5] Server 22 DC"
 
 
 # Import csv baselines based on the input (move it to root baselines directory so c binary knows which one to use)
@@ -81,6 +85,10 @@ switch ($osInput) {
 
     "4" {
 		Move-Item -Path ".\Baselines\Server 22\baseline.csv" -Destination ".\Baselines\baseline.csv"
+	}
+
+	"5" {
+		Move-Item -Path ".\Baselines\Server 22 (DC)\baseline.csv" -Destination ".\Baselines\baseline.csv"
 	}
 }
 

@@ -1,0 +1,715 @@
+﻿File Path, File Hash
+C:\ProgramData\Microsoft\AppV\Setup\OfficeIntegrator.ps1
+C:\ProgramData\Microsoft\Crypto\SystemKeys\90f651a304b144f5ae64e43e1ef663a9_9f6f7c78-0eb6-40b9-bb35-f6deb16f4fb8
+C:\ProgramData\Microsoft\Device Stage\Device\{113527a4-45d4-4b6f-b567-97838f1b04b0}\background.png
+C:\ProgramData\Microsoft\Device Stage\Device\{113527a4-45d4-4b6f-b567-97838f1b04b0}\behavior.xml
+C:\ProgramData\Microsoft\Device Stage\Device\{113527a4-45d4-4b6f-b567-97838f1b04b0}\device.png
+C:\ProgramData\Microsoft\Device Stage\Device\{113527a4-45d4-4b6f-b567-97838f1b04b0}\overlay.png
+C:\ProgramData\Microsoft\Device Stage\Device\{113527a4-45d4-4b6f-b567-97838f1b04b0}\superbar.png
+C:\ProgramData\Microsoft\Device Stage\Device\{8702d817-5aad-4674-9ef3-4d3decd87120}\background.png
+C:\ProgramData\Microsoft\Device Stage\Device\{8702d817-5aad-4674-9ef3-4d3decd87120}\behavior.xml
+C:\ProgramData\Microsoft\Device Stage\Device\{8702d817-5aad-4674-9ef3-4d3decd87120}\watermark.png
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\folder.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\netfol.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\pictures.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\resource.xml
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\ringtones.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\settings.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\sync.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\tasks.xml
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\wmp.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{07deb856-fc6e-4fb9-8add-d8f2cf8722c9}\en-US\resource.xml
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\folder.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\print_pref.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\print_property.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\print_queue.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\scan_.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\scan_property.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\scan_settings.ico
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\tasks.xml
+C:\ProgramData\Microsoft\Device Stage\Task\{e35be42d-f742-4d96-a50a-1775fb1a7a42}\en-US\resource.xml
+C:\ProgramData\Microsoft\Diagnosis\EventStore.db
+C:\ProgramData\Microsoft\Diagnosis\EventStore.db-shm
+C:\ProgramData\Microsoft\Diagnosis\EventStore.db-wal
+C:\ProgramData\Microsoft\Diagnosis\osver.txt
+C:\ProgramData\Microsoft\Diagnosis\parse.dat
+C:\ProgramData\Microsoft\Diagnosis\AggregatorStorage\UpdateHeartbeatScan$
+C:\ProgramData\Microsoft\Diagnosis\AggregatorStorage\UpdatePolicyScenarioReliabilityAggregator$
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\telemetry.ASM-WindowsDefault.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\TELEMETRY.ASM-WINDOWSSQ.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\telemetry.P-ARIA-af397ef28e484961ba48646a5d38cf54-77418283-d6f6-4a90-b0c8-37e0f5e7b087-7425.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\telemetry.P-Eco3PTelDefault.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\utc.aggregators.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\utc.allow.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\utc.allow.json.bk
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\utc.app.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\utc.cert.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\utc.privacy.json
+C:\ProgramData\Microsoft\Diagnosis\DownloadedSettings\utc.tracing.json
+C:\ProgramData\Microsoft\Diagnosis\ScenariosSqlStore\EventStore.db
+C:\ProgramData\Microsoft\Diagnosis\ScenariosSqlStore\EventStore.db-shm
+C:\ProgramData\Microsoft\Diagnosis\ScenariosSqlStore\EventStore.db-wal
+C:\ProgramData\Microsoft\Diagnosis\TenantStorage\P-ARIA\EventStore.db
+C:\ProgramData\Microsoft\Diagnosis\TenantStorage\P-ARIA\EventStore.db-shm
+C:\ProgramData\Microsoft\Diagnosis\TenantStorage\P-ARIA\EventStore.db-wal
+C:\ProgramData\Microsoft\EdgeUpdate\Log\MicrosoftEdgeUpdate.log
+C:\ProgramData\Microsoft\Event Viewer\Views\ServerRoles\desktop.ini
+C:\ProgramData\Microsoft\Event Viewer\Views\ServerRoles\RemoteDesktop.Events.xml
+C:\ProgramData\Microsoft\IdentityCRL\INT\wlidsvcconfig.xml
+C:\ProgramData\Microsoft\IdentityCRL\production\wlidsvcconfig.xml
+C:\ProgramData\Microsoft\MF\Active.GRL
+C:\ProgramData\Microsoft\MF\Pending.GRL
+C:\ProgramData\Microsoft\Network\Downloader\edb.chk
+C:\ProgramData\Microsoft\Network\Downloader\edb.log
+C:\ProgramData\Microsoft\Network\Downloader\edbres00001.jrs
+C:\ProgramData\Microsoft\Network\Downloader\edbres00002.jrs
+C:\ProgramData\Microsoft\Network\Downloader\edbtmp.log
+C:\ProgramData\Microsoft\Network\Downloader\qmgr.db
+C:\ProgramData\Microsoft\Network\Downloader\qmgr.jfm
+C:\ProgramData\Microsoft\ServerManager\Events\FileServer.Events.xml
+C:\ProgramData\Microsoft\Storage Health\StorageHealthModel.dat
+C:\ProgramData\Microsoft\UEV\InboxTemplates\DesktopSettings2013.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\EaseOfAccessSettings2013.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftInternetExplorer2013.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftInternetExplorer2013Backup.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftLync2010.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftLync2013Win32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftLync2013Win64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftNotepad.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2010Win32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2010Win64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2013BackupWin32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2013BackupWin64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2013Office365Win32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2013Office365Win64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2013Win32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2013Win64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2016BackupWin32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2016BackupWin64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2016Win32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOffice2016Win64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOutlook2013CAWin32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOutlook2013CAWin64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOutlook2016CAWin32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftOutlook2016CAWin64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftSkypeForBusiness2016Win32.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftSkypeForBusiness2016Win64.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\MicrosoftWordpad.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\NetworkPrinters.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\RoamingCredentialSettings.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\ThemeSettings2013.xml
+C:\ProgramData\Microsoft\UEV\InboxTemplates\VdiState.xml
+C:\ProgramData\Microsoft\UEV\Scripts\RegisterInboxTemplates.ps1
+C:\ProgramData\Microsoft\UEV\Templates\SettingsLocationTemplate.xsd
+C:\ProgramData\Microsoft\UEV\Templates\SettingsLocationTemplate2013.xsd
+C:\ProgramData\Microsoft\UEV\Templates\SettingsLocationTemplate2013A.xsd
+C:\ProgramData\Microsoft\User Account Pictures\Administrator.dat
+C:\ProgramData\Microsoft\User Account Pictures\guest.bmp
+C:\ProgramData\Microsoft\User Account Pictures\guest.png
+C:\ProgramData\Microsoft\User Account Pictures\user-192.png
+C:\ProgramData\Microsoft\User Account Pictures\user-32.png
+C:\ProgramData\Microsoft\User Account Pictures\user-40.png
+C:\ProgramData\Microsoft\User Account Pictures\user-48.png
+C:\ProgramData\Microsoft\User Account Pictures\user.bmp
+C:\ProgramData\Microsoft\User Account Pictures\user.png
+C:\ProgramData\Microsoft\Vault\AC658CB4-9126-49BD-B877-31EEDAB3F204\154E23D0-C644-4E6F-8CE6-5069272F999F.vsch
+C:\ProgramData\Microsoft\Vault\AC658CB4-9126-49BD-B877-31EEDAB3F204\2F1A6504-0641-44CF-8BB5-3612D865F2E5.vsch
+C:\ProgramData\Microsoft\Vault\AC658CB4-9126-49BD-B877-31EEDAB3F204\3CCD5499-87A8-4B10-A215-608888DD3B55.vsch
+C:\ProgramData\Microsoft\Vault\AC658CB4-9126-49BD-B877-31EEDAB3F204\Policy.vpol
+C:\ProgramData\Microsoft\Windows\AppxProvisioning.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\1527c705-839a-4832-9118-54d4Bd6a0c89_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\c5e2524a-ea46-4f67-841f-6a9465d9d515_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\E2A4F912-2574-4A75-9BB0-0D023378592B_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.AAD.BrokerPlugin_1000.19580.1000.0_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.AccountsControl_10.0.20348.1_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.AsyncTextService_10.0.20348.1_neutral__8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.BioEnrollment_10.0.19585.1001_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.CredDialogHost_10.0.19595.1001_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.ECApp_10.0.20348.1_neutral__8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.ECApp_10.0.20348.2849_neutral__8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.LockApp_10.0.20348.1_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.MicrosoftEdge.Stable_86.0.622.38_neutral__8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.UI.Xaml.2.2_2.21909.17002.0_x64__8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.UI.Xaml.2.4_2.42007.9001.0_x64__8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.VCLibs.140.00_14.0.27810.0_x64__8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Win32WebViewHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.Apprep.ChxApp_1000.20348.1.0_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.CapturePicker_10.0.19580.1000_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.CloudExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.NarratorQuickStart_10.0.20348.1_neutral_neutral_8wekyb3d8bbwe.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.OOBENetworkCaptivePortal_10.0.19580.1000_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.OOBENetworkConnectionFlow_10.0.19581.1000_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.PeopleExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.PinningConfirmationDialog_1000.20348.1.0_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.Search_1.15.0.20348_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.SecHealthUI_10.0.20348.1_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.SecHealthUI_10.0.20348.2849_neutral__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.ShellExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.StartMenuExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Microsoft.Windows.XGpuEjectDialog_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\MicrosoftWindows.Client.CBS_120.27512.10351.0_x64__cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\MicrosoftWindows.UndockedDevKit_10.0.20348.1_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Deployment.srd
+C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Deployment.srd-shm
+C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Deployment.srd-wal
+C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Machine.srd
+C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Machine.srd-shm
+C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Machine.srd-wal
+C:\ProgramData\Microsoft\Windows\AppRepository\Windows.CBSPreview_10.0.19580.1000_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\windows.immersivecontrolpanel_10.0.4.1000_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Windows.PrintDialog_6.2.1.0_neutral_neutral_cw5n1h2txyewy.xml
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\1527c705-839a-4832-9118-54d4Bd6a0c89_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\c5e2524a-ea46-4f67-841f-6a9465d9d515_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\E2A4F912-2574-4A75-9BB0-0D023378592B_10.0.19640.1000_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AAD.BrokerPlugin_1000.19580.1000.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AAD.BrokerPlugin_1000.19580.1000.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AAD.BrokerPlugin_1000.19580.1000.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AAD.BrokerPlugin_1000.19580.1000.0_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AccountsControl_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AccountsControl_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AccountsControl_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AccountsControl_10.0.20348.1_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AsyncTextService_10.0.20348.1_neutral__8wekyb3d8bbwe\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AsyncTextService_10.0.20348.1_neutral__8wekyb3d8bbwe\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AsyncTextService_10.0.20348.1_neutral__8wekyb3d8bbwe\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.AsyncTextService_10.0.20348.1_neutral__8wekyb3d8bbwe\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.BioEnrollment_10.0.19585.1001_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.BioEnrollment_10.0.19585.1001_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.BioEnrollment_10.0.19585.1001_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.BioEnrollment_10.0.19585.1001_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.CredDialogHost_10.0.19595.1001_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.CredDialogHost_10.0.19595.1001_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.CredDialogHost_10.0.19595.1001_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.CredDialogHost_10.0.19595.1001_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.ECApp_10.0.20348.1_neutral__8wekyb3d8bbwe\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.ECApp_10.0.20348.1_neutral__8wekyb3d8bbwe\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.ECApp_10.0.20348.1_neutral__8wekyb3d8bbwe\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.ECApp_10.0.20348.2849_neutral__8wekyb3d8bbwe\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.ECApp_10.0.20348.2849_neutral__8wekyb3d8bbwe\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.ECApp_10.0.20348.2849_neutral__8wekyb3d8bbwe\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.ECApp_10.0.20348.2849_neutral__8wekyb3d8bbwe\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.LockApp_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.LockApp_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.LockApp_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.LockApp_10.0.20348.1_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.UI.Xaml.2.2_2.21909.17002.0_x64__8wekyb3d8bbwe\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.UI.Xaml.2.2_2.21909.17002.0_x64__8wekyb3d8bbwe\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.UI.Xaml.2.2_2.21909.17002.0_x64__8wekyb3d8bbwe\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.UI.Xaml.2.4_2.42007.9001.0_x64__8wekyb3d8bbwe\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.UI.Xaml.2.4_2.42007.9001.0_x64__8wekyb3d8bbwe\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.UI.Xaml.2.4_2.42007.9001.0_x64__8wekyb3d8bbwe\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.UI.Xaml.2.4_2.42007.9001.0_x64__8wekyb3d8bbwe\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.VCLibs.140.00_14.0.27810.0_x64__8wekyb3d8bbwe\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Win32WebViewHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Win32WebViewHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Win32WebViewHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Win32WebViewHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Apprep.ChxApp_1000.20348.1.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Apprep.ChxApp_1000.20348.1.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Apprep.ChxApp_1000.20348.1.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Apprep.ChxApp_1000.20348.1.0_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CapturePicker_10.0.19580.1000_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CapturePicker_10.0.19580.1000_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CapturePicker_10.0.19580.1000_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CapturePicker_10.0.19580.1000_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CloudExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CloudExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CloudExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.CloudExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.NarratorQuickStart_10.0.20348.1_neutral_neutral_8wekyb3d8bbwe\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.NarratorQuickStart_10.0.20348.1_neutral_neutral_8wekyb3d8bbwe\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.NarratorQuickStart_10.0.20348.1_neutral_neutral_8wekyb3d8bbwe\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.NarratorQuickStart_10.0.20348.1_neutral_neutral_8wekyb3d8bbwe\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_10.0.19580.1000_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_10.0.19580.1000_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_10.0.19580.1000_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkCaptivePortal_10.0.19580.1000_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_10.0.19581.1000_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_10.0.19581.1000_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_10.0.19581.1000_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.OOBENetworkConnectionFlow_10.0.19581.1000_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PeopleExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PeopleExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PeopleExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PeopleExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PinningConfirmationDialog_1000.20348.1.0_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PinningConfirmationDialog_1000.20348.1.0_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PinningConfirmationDialog_1000.20348.1.0_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.PinningConfirmationDialog_1000.20348.1.0_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Search_1.15.0.20348_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Search_1.15.0.20348_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Search_1.15.0.20348_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.Search_1.15.0.20348_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecHealthUI_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecHealthUI_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecHealthUI_10.0.20348.1_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecHealthUI_10.0.20348.2849_neutral__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecHealthUI_10.0.20348.2849_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecHealthUI_10.0.20348.2849_neutral__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.SecHealthUI_10.0.20348.2849_neutral__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.ShellExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.ShellExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.ShellExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.ShellExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.StartMenuExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.StartMenuExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.StartMenuExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.StartMenuExperienceHost_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.XGpuEjectDialog_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.XGpuEjectDialog_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.XGpuEjectDialog_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Microsoft.Windows.XGpuEjectDialog_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\MicrosoftWindows.Client.CBS_120.27512.10351.0_x64__cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\MicrosoftWindows.Client.CBS_120.27512.10351.0_x64__cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\MicrosoftWindows.Client.CBS_120.27512.10351.0_x64__cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\MicrosoftWindows.Client.CBS_120.27512.10351.0_x64__cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\MicrosoftWindows.UndockedDevKit_10.0.20348.1_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.CBSPreview_10.0.19580.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.CBSPreview_10.0.19580.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.CBSPreview_10.0.19580.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.CBSPreview_10.0.19580.1000_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\windows.immersivecontrolpanel_10.0.4.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\windows.immersivecontrolpanel_10.0.4.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\windows.immersivecontrolpanel_10.0.4.1000_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\windows.immersivecontrolpanel_10.0.4.1000_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.PrintDialog_6.2.1.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.PrintDialog_6.2.1.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG1
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.PrintDialog_6.2.1.0_neutral_neutral_cw5n1h2txyewy\ActivationStore.dat.LOG2
+C:\ProgramData\Microsoft\Windows\AppRepository\Packages\Windows.PrintDialog_6.2.1.0_neutral_neutral_cw5n1h2txyewy\S-1-5-21-2480906585-3916449339-1225391921-500.pckgdep
+C:\ProgramData\Microsoft\Windows\Caches\cversions.2.db
+C:\ProgramData\Microsoft\Windows\Caches\{6AF0698E-D558-4F6E-9B3C-3716689AF493}.2.ver0x0000000000000002.db
+C:\ProgramData\Microsoft\Windows\Caches\{DDF571F2-BE98-426D-8288-1A9A39C3FDA2}.2.ver0x0000000000000002.db
+C:\ProgramData\Microsoft\Windows\ClipSVC\tokens.dat
+C:\ProgramData\Microsoft\Windows\ClipSVC\Archive\KeyHolder\61afd6a2-d7c3-8d25-36c2-0c2c47e3aca8.xml
+C:\ProgramData\Microsoft\Windows\DeviceMetadataCache\dmrc.idx
+C:\ProgramData\Microsoft\Windows\DeviceMetadataStore\en-US\34e548a8-3268-4dde-bedf-c40f9b6c814a.devicemetadata-ms
+C:\ProgramData\Microsoft\Windows\DeviceMetadataStore\en-US\63921eef-8415-4368-9201-f0df4af5778f.devicemetadata-ms
+C:\ProgramData\Microsoft\Windows\Models\ModelPayload.json
+C:\ProgramData\Microsoft\Windows\OneSettings\AppArchiving.json
+C:\ProgramData\Microsoft\Windows\OneSettings\ASAP_CloudPolicy.json
+C:\ProgramData\Microsoft\Windows\OneSettings\config.json
+C:\ProgramData\Microsoft\Windows\OneSettings\CortanaUWP.json
+C:\ProgramData\Microsoft\Windows\OneSettings\CTAC.json
+C:\ProgramData\Microsoft\Windows\OneSettings\DirectXDbVersion.json
+C:\ProgramData\Microsoft\Windows\OneSettings\FeatureConfig.json
+C:\ProgramData\Microsoft\Windows\OneSettings\IrisClient.json
+C:\ProgramData\Microsoft\Windows\OneSettings\SCCInstallService.json
+C:\ProgramData\Microsoft\Windows\OneSettings\ServicingSettings.json
+C:\ProgramData\Microsoft\Windows\OneSettings\StorageGroveler.json
+C:\ProgramData\Microsoft\Windows\OneSettings\TroubleshootingSvc.json
+C:\ProgramData\Microsoft\Windows\OneSettings\UsoSettings.json
+C:\ProgramData\Microsoft\Windows\OneSettings\UusSettings.json
+C:\ProgramData\Microsoft\Windows\OneSettings\WaaSAssessmentSettings.json
+C:\ProgramData\Microsoft\Windows\Start Menu\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Azure Arc Setup.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Immersive Control Panel.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Server Manager.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessibility\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessibility\Speech Recognition.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Calculator.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Math Input Panel.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Notepad.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Paint.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Remote Desktop Connection.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Snipping Tool.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Steps Recorder.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Windows Media Player.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Wordpad.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\XPS Viewer.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\System Tools\Character Map.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\System Tools\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\System Tools\Windows Server Backup.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Component Services.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Computer Management.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\dfrgui.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Disk Cleanup.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Event Viewer.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\iSCSI Initiator.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Memory Diagnostics Tool.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Microsoft Azure services.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\ODBC Data Sources (32-bit).lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\ODBC Data Sources (64-bit).lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Performance Monitor.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\RecoveryDrive.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Registry Editor.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Resource Monitor.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Security Configuration Management.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Server Manager.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\services.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\System Configuration.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\System Information.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Task Scheduler.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Windows Defender Firewall with Advanced Security.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Windows Server Backup.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools\Terminal Services\Desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Maintenance\Desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\System Tools\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\System Tools\Task Manager.lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\desktop.ini
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell ISE (x86).lnk
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell ISE.lnk
+C:\ProgramData\Microsoft\Windows\WER\ReportArchive\NonCritical_MicrosoftEdgeUpd_af6a89ad1c3329701b58db5de2b90749d9b2a17_00000000_cdf247cb-f630-43bf-8b3f-b766f5d639ef\Report.wer
+C:\ProgramData\Microsoft\Windows\wfp\wfpdiag.etl
+C:\ProgramData\Microsoft\Windows Defender\IMpService77BDAF73-B396-481F-9042-AD358843EC24.lock
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Backup\mpasbase.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Backup\mpasdlta.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Backup\mpavbase.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Backup\mpavdlta.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Backup\mpengine.dll
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Default\MpAsBase.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Default\MpAsDlta.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Default\MpAvBase.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Default\MpAvDlta.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\Default\MpEngine.dll
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\StableEngineEtwLocation\mpengine_etw.dll
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{409A82F9-2797-450E-B5B2-A506FF9F82DB}\mpasbase.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{409A82F9-2797-450E-B5B2-A506FF9F82DB}\mpasdlta.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{409A82F9-2797-450E-B5B2-A506FF9F82DB}\mpavbase.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{409A82F9-2797-450E-B5B2-A506FF9F82DB}\mpavdlta.vdm
+C:\ProgramData\Microsoft\Windows Defender\Definition Updates\{409A82F9-2797-450E-B5B2-A506FF9F82DB}\mpengine.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\com.microsoft.defender.be.chrome.json
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\com.microsoft.defender.be.firefox.json
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ConfigSecurityPolicy.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\DlpUserAgent.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\endpointdlp.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Microsoft-Antimalware-AMFilter.man
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Microsoft-Antimalware-NIS.man
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Microsoft-Antimalware-Protection.man
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Microsoft-Antimalware-RTP.man
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Microsoft-Antimalware-Service.man
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Microsoft-Windows-Windows Defender.man
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpAsDesc.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpAzSubmit.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpClient.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpCmdRun.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpCommu.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpCopyAccelerator.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpDefenderCoreService.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpDetours.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpDetoursCopyAccelerator.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpDlp.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpDlpCmd.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpDlpService.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpEvMsg.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpOAV.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpRtp.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpSenseComm.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpSvc.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpUpdate.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MpUxAgent.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpEng.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\MsMpLics.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\NisSrv.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\NpRep.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ProtectionManagement.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ProtectionManagement.mof
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ProtectionManagement_Uninstall.mof
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ThirdPartyNotices.txt
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\af-ZA\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\am-ET\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ar-SA\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ar-SA\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\as-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\az-Latn-AZ\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\bg-BG\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\bg-BG\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\bn-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\bs-Latn-BA\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ca-ES\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ca-ES\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ca-ES-valencia\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\cs-CZ\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\cs-CZ\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\cs-CZ\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\cy-GB\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\da-DK\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\da-DK\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\da-DK\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\de-DE\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\de-DE\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\de-DE\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\de-DE\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Drivers\WdBoot.sys
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Drivers\WdDevFlt.sys
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Drivers\WdFilter.sys
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Drivers\WdNisDrv.sys
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\el-GR\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\el-GR\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\el-GR\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\en-GB\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\en-GB\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\en-US\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\en-US\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\en-US\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\en-US\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\es-ES\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\es-ES\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\es-ES\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\es-ES\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\es-MX\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\es-MX\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\et-EE\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\et-EE\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\eu-ES\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fa-IR\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fi-FI\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fi-FI\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fi-FI\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fil-PH\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fr-CA\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fr-CA\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fr-FR\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fr-FR\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fr-FR\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\fr-FR\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ga-IE\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\gd-GB\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\gl-ES\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\gu-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\he-IL\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\he-IL\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\hi-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\hr-HR\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\hr-HR\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\hu-HU\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\hu-HU\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\hu-HU\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\id-ID\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\id-ID\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\is-IS\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\it-IT\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\it-IT\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\it-IT\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\it-IT\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ja-JP\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ja-JP\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ja-JP\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ja-JP\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ka-GE\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\kk-KZ\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\km-KH\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\kn-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ko-KR\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ko-KR\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ko-KR\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ko-KR\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\kok-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\lb-LU\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\lo-LA\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\lt-LT\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\lt-LT\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\lv-LV\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\lv-LV\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\mi-NZ\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\mk-MK\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ml-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\mr-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ms-MY\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\mt-MT\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\nb-NO\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\nb-NO\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\nb-NO\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ne-NP\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\nl-NL\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\nl-NL\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\nl-NL\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\nn-NO\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\or-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pa-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pl-PL\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pl-PL\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pl-PL\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\Defender.psd1
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\DefenderPerformance.psd1
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpBehavioralNetworkBlockingRules.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpComputerStatus.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpPerformanceRecording.psm1
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpPerformanceRecording.wprp
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpPerformanceReport.Format.ps1xml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpPreference.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpRollback.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpScan.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpSignature.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpThreat.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpThreatCatalog.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpThreatDetection.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\Powershell\MSFT_MpWDOScan.cdxml
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pt-BR\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pt-BR\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pt-BR\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pt-BR\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pt-PT\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pt-PT\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\pt-PT\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\quz-PE\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ro-RO\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ro-RO\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ru-RU\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ru-RU\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ru-RU\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ru-RU\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sk-SK\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sk-SK\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sl-SI\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sl-SI\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sq-AL\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sr-Cyrl-BA\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sr-Cyrl-RS\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sr-Latn-RS\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sr-Latn-RS\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sv-SE\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sv-SE\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\sv-SE\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ta-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\te-IN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\th-TH\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\th-TH\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\tr-TR\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\tr-TR\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\tr-TR\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\tt-RU\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ug-CN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\uk-UA\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\uk-UA\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\ur-PK\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\vi-VN\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\vi-VN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\endpointdlp.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\MpAsDesc.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\MpClient.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\MpCmdRun.exe
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\MpDetours.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\MpDetoursCopyAccelerator.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\MpOAV.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\MsMpLics.dll
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\X86\en-US\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-CN\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-CN\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-CN\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-CN\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-TW\MpAsDesc.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-TW\MpEvMsg.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-TW\mpuxagent.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.24090.11-0\zh-TW\ProtectionManagement.dll.mui
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.01
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.67
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.6C
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.79
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.7C
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.7E
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.80
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.83
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.87
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.A0
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.DB
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpcache-1D983B7F862AFDE81A6CDA760FC28BA72D9565CA.bin.E6
+C:\ProgramData\Microsoft\Windows Defender\Scans\MpDiag.bin
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpenginedb.db
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpenginedb.db-shm
+C:\ProgramData\Microsoft\Windows Defender\Scans\mpenginedb.db-wal
+C:\ProgramData\Microsoft\Windows Defender\Scans\History\CacheManager\CBDE06AC-AFEA-4C52-A592-FD0DB0F758AB-0.bin
+C:\ProgramData\Microsoft\Windows Defender\Scans\History\Service\Unknown.Log
+C:\ProgramData\Microsoft\Windows Defender\Support\MPDetection-20250125-091456.log
+C:\ProgramData\Microsoft\Windows Defender\Support\MPDeviceControl-20250125-173732.log
+C:\ProgramData\Microsoft\Windows Defender\Support\MPLog-20250125-091456.log
+C:\ProgramData\Microsoft\Windows Defender\Support\MPScanSkip-20250125-173732.log
+C:\ProgramData\Microsoft\Windows Defender\Support\MpWppTracing-20250125-091456-00000003-ffffffff.bin
+C:\ProgramData\Microsoft\Windows Defender\Support\MpWppTracing-20250125-091528-00000003-ffffffff.bin
+C:\ProgramData\Microsoft\Windows Defender\Support\MpWppTracing-20250125-093457-00000003-ffffffff.bin
+C:\ProgramData\Microsoft\Windows Defender\Support\MpWppTracing-20250125-173737-00000003-fffffffeffffffff.bin
+C:\ProgramData\Package Cache\{0025DD72-A959-45B5-A0A3-7EFEB15A8050}v14.36.32532\packages\vcRuntimeAdditional_amd64\cab1.cab
+C:\ProgramData\Package Cache\{0025DD72-A959-45B5-A0A3-7EFEB15A8050}v14.36.32532\packages\vcRuntimeAdditional_amd64\vc_runtimeAdditional_x64.msi
+C:\ProgramData\Package Cache\{410c0ee1-00bb-41b6-9772-e12c2828b02f}\state.rsm
+C:\ProgramData\Package Cache\{410c0ee1-00bb-41b6-9772-e12c2828b02f}\VC_redist.x86.exe
+C:\ProgramData\Package Cache\{73F77E4E-5A17-46E5-A5FC-8A061047725F}v14.36.32532\packages\vcRuntimeMinimum_x86\cab1.cab
+C:\ProgramData\Package Cache\{73F77E4E-5A17-46E5-A5FC-8A061047725F}v14.36.32532\packages\vcRuntimeMinimum_x86\vc_runtimeMinimum_x86.msi
+C:\ProgramData\Package Cache\{8bdfe669-9705-4184-9368-db9ce581e0e7}\state.rsm
+C:\ProgramData\Package Cache\{8bdfe669-9705-4184-9368-db9ce581e0e7}\VC_redist.x64.exe
+C:\ProgramData\Package Cache\{C2C59CAB-8766-4ABD-A8EF-1151A36C41E5}v14.36.32532\packages\vcRuntimeAdditional_x86\cab1.cab
+C:\ProgramData\Package Cache\{C2C59CAB-8766-4ABD-A8EF-1151A36C41E5}v14.36.32532\packages\vcRuntimeAdditional_x86\vc_runtimeAdditional_x86.msi
+C:\ProgramData\Package Cache\{D5D19E2F-7189-42FE-8103-92CD1FA457C2}v14.36.32532\packages\vcRuntimeMinimum_amd64\cab1.cab
+C:\ProgramData\Package Cache\{D5D19E2F-7189-42FE-8103-92CD1FA457C2}v14.36.32532\packages\vcRuntimeMinimum_amd64\vc_runtimeMinimum_x64.msi
+C:\ProgramData\regid.1991-06.com.microsoft\regid.1991-06.com.microsoft_Windows-Server-2022-Standard-Evaluation.swidtag
+C:\ProgramData\USOPrivate\UpdateStore\store.db
+C:\ProgramData\USOShared\Logs\System\MoUsoCoreWorker.b50b7717-8a90-4e11-b1b7-1cff21d762e7.1.etl
+C:\ProgramData\USOShared\Logs\System\MoUsoCoreWorker.b50b7717-8a90-4e11-b1b7-1cff21d762e7.2.etl
+C:\ProgramData\USOShared\Logs\System\MoUsoCoreWorker.b50b7717-8a90-4e11-b1b7-1cff21d762e7.3.etl
+C:\ProgramData\USOShared\Logs\System\MoUsoCoreWorker.b50b7717-8a90-4e11-b1b7-1cff21d762e7.4.etl
+C:\ProgramData\USOShared\Logs\System\MoUsoCoreWorker.b50b7717-8a90-4e11-b1b7-1cff21d762e7.5.etl
+C:\ProgramData\USOShared\Logs\System\MoUsoCoreWorker.e60c3e35-6a5e-44ad-bb5f-8d71a08228f7.1.etl
+C:\ProgramData\USOShared\Logs\System\MoUsoCoreWorker.e60c3e35-6a5e-44ad-bb5f-8d71a08228f7.2.etl
+C:\ProgramData\USOShared\Logs\System\MoUxCoreWorker.7d5e91ef-0111-4e78-81c4-b3dd9b4ea90f.1.etl
+C:\ProgramData\USOShared\Logs\System\MoUxCoreWorker.9c2780b4-0e6d-4623-89d9-c68ec587b8bb.1.etl
+C:\ProgramData\USOShared\Logs\System\NotificationUxBroker.7c5863a8-c6e6-4265-88ee-b961f71366f1.1.etl
+C:\ProgramData\USOShared\Logs\System\UpdateSessionOrchestration.37274ddc-bc08-4fc1-be90-92beb3eded08.1.etl
+C:\ProgramData\USOShared\Logs\System\UpdateSessionOrchestration.bac77007-b6b6-4a81-9c69-3021eb754b98.1.etl
+C:\ProgramData\USOShared\Logs\User\NotificationUx.482d775e-37ba-4456-9303-82d536a00cbd.1.etl
+C:\ProgramData\USOShared\Logs\User\UpdateUx.2b419c5a-f76c-45a0-920d-fde9a38a6657.1.etl
+C:\ProgramData\USOShared\Logs\User\UpdateUx.2b419c5a-f76c-45a0-920d-fde9a38a6657.2.etl
+C:\ProgramData\USOShared\Logs\User\UpdateUx.2b419c5a-f76c-45a0-920d-fde9a38a6657.3.etl
+C:\ProgramData\USOShared\Logs\User\UpdateUx.f03000d4-06fc-4241-b38b-f8de2cbf78df.1.etl
+C:\ProgramData\USOShared\Logs\User\UpdateUx.f03000d4-06fc-4241-b38b-f8de2cbf78df.2.etl
+C:\ProgramData\VMware\logs\vmmsi.log_20250125_093109.log
+C:\ProgramData\VMware\RawdskCompatibility\vmrawdsk.log
+C:\ProgramData\VMware\VMware Tools\deviceHelperPolicy.adm
+C:\ProgramData\VMware\VMware Tools\deviceHelperPolicy.admx
+C:\ProgramData\VMware\VMware Tools\manifest.txt
+C:\ProgramData\VMware\VMware Tools\tools.conf.example
+C:\ProgramData\VMware\VMware Tools\en-US\deviceHelperPolicy.adml
+C:\ProgramData\VMware\VMware Tools\Unity Filters\adobeflashcs3.txt
+C:\ProgramData\VMware\VMware Tools\Unity Filters\adobephotoshopcs3.txt
+C:\ProgramData\VMware\VMware Tools\Unity Filters\googledesktop.txt
+C:\ProgramData\VMware\VMware Tools\Unity Filters\microsoftoffice.txt
+C:\ProgramData\VMware\VMware Tools\Unity Filters\vistasidebar.txt
+C:\ProgramData\VMware\VMware Tools\Unity Filters\visualstudio2005.txt
+C:\ProgramData\VMware\VMware Tools\Unity Filters\vmwarefilters.txt
+C:\ProgramData\VMware\VMware Tools\Unity Filters\win7gadgets.txt
+C:\ProgramData\VMware\VMware VGAuth\logfile.txt.0
+C:\ProgramData\VMware\VMware VGAuth\vgauth.conf
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\de\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\de\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\de\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\en\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\en\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\en\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\es\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\es\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\es\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\fr\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\fr\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\fr\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\it\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\it\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\it\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\ja\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\ja\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\ja\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\ko\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\ko\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\ko\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\zh_CN\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\zh_CN\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\zh_CN\VGAuthService.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\zh_TW\VGAuthCli.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\zh_TW\VGAuthLib.vmsg
+C:\ProgramData\VMware\VMware VGAuth\msgCatalogs\messages\zh_TW\VGAuthService.vmsg
